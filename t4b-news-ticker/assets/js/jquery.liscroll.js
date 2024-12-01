@@ -6,8 +6,8 @@
  * http://www.opensource.org/licenses/mit-license.php
  * http://www.gnu.org/licenses/gpl.html
  *
- * Modified by @realwebcare v1.2.8
- * T4B News Ticker v1.3.1 - 31 July, 2024
+ * Modified by @realwebcare v1.3.1
+ * T4B News Ticker v1.3.2 - 1 December, 2024
  * by @realwebcare - https://www.realwebcare.com/
  */
 (function($){

@@ -1,13 +1,13 @@
 <?php
 /*
- *  T4B News Ticker v1.3.1 - 31 July, 2024
+ *  T4B News Ticker v1.3.2 - 1 December, 2024
  *  By @realwebcare - https://www.realwebcare.com/
  */
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 /* Sidebar */
 add_action( 't4bnt_settings_content', 't4bnt_sidebar' );
-if( !function_exists( 't4bnt_sidebar' ) ){
+if ( !function_exists( 't4bnt_sidebar' ) ) {
 	function t4bnt_sidebar() { ?>
 		<div id="t4bnt-sidebar" class="postbox-container">
 			<div id="t4bntusage-features" class="t4bntusage-sidebar">
@@ -53,11 +53,11 @@ if( !function_exists( 't4bnt_sidebar' ) ){
 			<div id="t4bntusage-info" class="t4bntusage-sidebar">
 				<h3><?php esc_html_e('Plugin Info', 't4b-news-ticker'); ?></h3>
 				<ul class="t4bntusage-list">
-					<li><?php esc_html_e('Version: 1.3.1', 't4b-news-ticker'); ?></li>
+					<li><?php esc_html_e('Version: 1.3.2', 't4b-news-ticker'); ?></li>
 					<li><?php esc_html_e('Scripts: PHP + CSS + JS', 't4b-news-ticker'); ?></li>
 					<li><?php esc_html_e('Requires: Wordpress 5.4+', 't4b-news-ticker'); ?></li>
 					<li><?php esc_html_e('First release: 29 December, 2014', 't4b-news-ticker'); ?></li>
-					<li><?php esc_html_e('Last Update: 31 July, 2024', 't4b-news-ticker'); ?></li>
+					<li><?php esc_html_e('Last Update: 1 December, 2024', 't4b-news-ticker'); ?></li>
 					<li><?php esc_html_e('By', 't4b-news-ticker'); ?>: <a href="https://www.realwebcare.com/" target="_blank"><?php esc_html_e('Realwebcare', 't4b-news-ticker'); ?></a><br/>
 					<li><?php esc_html_e('Need Help', 't4b-news-ticker'); ?>? <a href="https://wordpress.org/support/plugin/t4b-news-ticker/" target="_blank"><?php esc_html_e('Support', 't4b-news-ticker'); ?></a><br/>
                     <li><?php esc_html_e('Like it? Please leave us a', 't4b-news-ticker'); ?> <a target="_blank" href="https://wordpress.org/support/plugin/t4b-news-ticker/reviews/?filter=5/#new-post">&#9733;&#9733;&#9733;&#9733;&#9733;</a> <?php esc_html_e('rating. We highly appreciate your support!', 't4b-news-ticker'); ?><br/>
@@ -72,66 +72,73 @@ if( !function_exists( 't4bnt_sidebar' ) ){
 * Get the current time and set it as an option when the plugin is activated.
 * @return null
 */
-function t4bnt_set_activation_time(){
-    $get_activation_time = strtotime("now");
-    add_option('t4bnt_activation_time', $get_activation_time );
+if ( !function_exists( 't4bnt_set_activation_time' ) ) {
+	function t4bnt_set_activation_time(){
+		$get_activation_time = strtotime("now");
+		add_option( 't4bnt_activation_time', $get_activation_time );
+	}
 }
 
 /**
 * Check date on admin initiation and add to admin notice if it was over 7 days ago.
 * @return null
 */
-function t4bnt_check_installation_date() {
-    $review_nt = "";
-    $review_nt = get_option('t4bnt_review_nt');
- 
-    if (!$review_nt) {
-        $install_date = get_option( 't4bnt_activation_time', 'default_value' );
-        $past_date = strtotime( '-7 days' );
+if ( !function_exists( 't4bnt_check_installation_date' ) ) {
+	function t4bnt_check_installation_date() {
+		$review_nt = "";
+		$review_nt = get_option('t4bnt_review_nt');
+	
+		if ( !$review_nt ) {
+			$install_date = get_option( 't4bnt_activation_time', 'default_value' );
+			$past_date = strtotime( '-7 days' );
 
-        if ($install_date !== 'default_value' && $install_date < $past_date) {
-            add_action( 'admin_notices', 't4bnt_display_admin_notice' );
-        } else {
-            $get_activation_time = strtotime("now");
-            add_option('t4bnt_activation_time', $get_activation_time );
-        }
-    }
+			if ( $install_date !== 'default_value' && $install_date < $past_date ) {
+				add_action( 'admin_notices', 't4bnt_display_admin_notice' );
+			} else {
+				$get_activation_time = strtotime("now");
+				add_option( 't4bnt_activation_time', $get_activation_time );
+			}
+		}
+	}
 }
 add_action( 'admin_init', 't4bnt_check_installation_date' );
 
 /**
 * Display Admin Notice, asking for a review
 **/
-function t4bnt_display_admin_notice() {
-    // WordPress global variable 
-    global $pagenow;
-    if (is_admin() && $pagenow === 'options-general.php' && isset($_GET['page']) && $_GET['page'] === 't4bnt-settings') {
-        $dont_disturb = esc_url(admin_url('options-general.php?page=t4bnt-settings&review_nt=1'));
-        $plugin_info = get_plugin_data(T4BNT_AUF, true, true);
-        $reviewurl = esc_url('https://wordpress.org/support/plugin/' . sanitize_title($plugin_info['TextDomain']) . '/reviews/');
+if ( !function_exists( 't4bnt_display_admin_notice' ) ) {
+	function t4bnt_display_admin_notice() {
+		// WordPress global variable 
+		global $pagenow;
+		if ( is_admin() && $pagenow === 'options-general.php' && isset( $_GET['page'] ) && $_GET['page'] === 't4bnt-settings' ) {
+			$dont_disturb = esc_url(admin_url('options-general.php?page=t4bnt-settings&review_nt=1'));
+			$plugin_info = get_plugin_data( T4BNT_AUF, true, true );
+			$reviewurl = esc_url( 'https://wordpress.org/support/plugin/' . sanitize_title( $plugin_info['TextDomain'] ) . '/reviews/' );
 
-        printf(
-            __('<div id="t4bnt-review" class="notice notice-success is-dismissible"><p>It\'s been 7 days since your last update or installation. Your feedback is crucial for our improvement. Please take a moment to share your thoughts by leaving a quick review.</p><div class="t4bnt-review-btn"><a href="%s" class="button button-primary" target="_blank">Leave a Review</a><a href="%s" class="t4bnt-grid-review-done button button-secondary">Already Left a Review</a></div></div>'),
-            $reviewurl,
-            $dont_disturb
-        );
-    }
+			printf(
+				__( '<div id="t4bnt-review" class="notice notice-success is-dismissible"><p>It\'s been 7 days since your last update or installation. Your feedback is crucial for our improvement. Please take a moment to share your thoughts by leaving a quick review.</p><div class="t4bnt-review-btn"><a href="%s" class="button button-primary" target="_blank">Leave a Review</a><a href="%s" class="t4bnt-grid-review-done button button-secondary">Already Left a Review</a></div></div>' ),
+				$reviewurl,
+				$dont_disturb
+			);
+		}
+	}
 }
 
 /**
 * remove the notice for the user if review already done or if the user does not want to
 **/
-function t4bnt_review_nt() {    
-    if( isset( $_GET['review_nt'] ) && !empty( $_GET['review_nt'] ) ) {
-        $review_nt = $_GET['review_nt'];
-        if( $review_nt == 1 ) {
-            add_option( 't4bnt_review_nt' , TRUE );
-        }
-    }
+if ( !function_exists( 't4bnt_review_nt' ) ) {
+	function t4bnt_review_nt() {    
+		if ( isset( $_GET['review_nt'] ) && !empty( $_GET['review_nt'] ) ) {
+			$review_nt = $_GET['review_nt'];
+			if ( $review_nt == 1 ) {
+				add_option( 't4bnt_review_nt' , TRUE );
+			}
+		}
+	}
 }
 add_action( 'admin_init', 't4bnt_review_nt', 5 );
 
 require_once ( T4BNT_PLUGIN_PATH . 'ticker-shortcode.php' );
 require_once ( T4BNT_PLUGIN_PATH . 'class/t4bnt-class.settings-api.php' );
 require_once ( T4BNT_PLUGIN_PATH . 'inc/ticker-settings.php' );
-?>

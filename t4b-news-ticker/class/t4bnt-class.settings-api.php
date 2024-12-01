@@ -8,7 +8,7 @@
  * @link https://tareq.co Tareq Hasan
  * @example example/oop-example.php How to use the class
  *
- *  T4B News Ticker v1.3.1 - 31 July, 2024
+ *  T4B News Ticker v1.3.2 - 1 December, 2024
  *  By @realwebcare - https://www.realwebcare.com/
  */
 if ( !class_exists( 't4bnt_WeDevs_Settings_API' ) ):
@@ -26,6 +26,7 @@ class t4bnt_WeDevs_Settings_API {
      * @var array
      */
     protected $settings_fields = array();
+
     public function __construct() {
         add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
     }
@@ -65,6 +66,7 @@ class t4bnt_WeDevs_Settings_API {
         $this->settings_fields = $fields;
         return $this;
     }
+
     function add_field( $section, $field ) {
         $defaults = array(
             'name'  => '',
