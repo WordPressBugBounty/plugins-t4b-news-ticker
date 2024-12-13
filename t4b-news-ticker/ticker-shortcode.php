@@ -1,6 +1,6 @@
 <?php
 /*
- *  T4B News Ticker v1.3.2 - 1 December, 2024
+ *  T4B News Ticker v1.3.3 - 13 December, 2024
  *  By @realwebcare - https://www.realwebcare.com/
  */
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -18,7 +18,7 @@ if ( !function_exists( 't4bnt_show_news_ticker' ) ) {
 		$ticker_home = t4bnt_get_option( 'ticker_home', 't4bnt_general', 'off' );
 		$ticker_ntab = t4bnt_get_option( 'ticker_ntab', 't4bnt_general', 'off' );
 
-		if ( $ticker_news == 'on' && (  $ticker_home == 'off' || ( $ticker_home == 'on' && is_home() ) ) ):
+		if ( $ticker_news == 'on' && ( $ticker_home == 'off' || ( $ticker_home == 'on' && is_front_page() ) ) ) :
 			$ticker_type = t4bnt_get_option( 'ticker_type', 't4bnt_general', 'category');
 			$ticker_cat = t4bnt_get_option( 'ticker_cat', 't4bnt_general', '');
 			$ticker_tag = t4bnt_get_option( 'ticker_tag', 't4bnt_general', '');
@@ -32,7 +32,7 @@ if ( !function_exists( 't4bnt_show_news_ticker' ) ) {
 			$order_by = t4bnt_get_option( 'ticker_order_by', 't4bnt_general', $orderby );
 			$ticker_order = t4bnt_get_option( 'ticker_order', 't4bnt_general', $order );
 			$ticker_custom = t4bnt_get_option( 'ticker_custom', 't4bnt_general', '' );
-			$target = ''; ?>
+			$target = $ticker_query = ''; ?>
 
 			<div class="ticker-news"><?php
 				if ( $ticker_effect == 'scroll' ) { ?>
@@ -42,14 +42,18 @@ if ( !function_exists( 't4bnt_show_news_ticker' ) ) {
 				}
 				global $post;
 				$orig_post = $post;
-				if ( $ticker_type != 'custom' ):
+				if ( $ticker_type != 'custom' ) {
 					if ( $ticker_type == 'tag' ) {
 						$fea_tags = $sep = '';
 						$tag_lists = explode (',' , $ticker_tag );
 						foreach ( $tag_lists as $tag ) {
 							$theTagId = get_term_by( 'name', $tag, 'post_tag' );
-							if ( $fea_tags ) $sep = ' , ';
-							$fea_tags .=  $sep . $theTagId->slug;
+							if ( $fea_tags ) {
+								$sep = ' , ';
+							}
+							if ( $theTagId ) {
+								$fea_tags .=  $sep . $theTagId->slug;
+							}
 						}
 						$args = array(
 							'post_type' 		=> 'post',
@@ -67,26 +71,28 @@ if ( !function_exists( 't4bnt_show_news_ticker' ) ) {
 							'order'				=> $ticker_order,
 						);
 					}
-					$ticker_query = new WP_Query( $args );
-					if ( $ticker_query->have_posts() ) : $count = 0; ?>
-						<div class='tickercontainer'>
-							<div class='ticker-mask'>
-								<ul id="ticker" class="js-hidden"><?php
-									while( $ticker_query->have_posts() ) :
-										$ticker_query->the_post();
-										$count++;
-										if ( $ticker_ntab == 'on' ) :
-											$target = ' target="_blank"';
-										endif; ?>
-									<li><a href="<?php the_permalink()?>" title="<?php the_title(); ?>"<?php echo esc_attr( $target ); ?>><?php the_title(); ?></a></li><?php
-									endwhile;
-									wp_reset_postdata();
-									wp_reset_query(); ?>
-								</ul>
-							</div>
-						</div><?php
-					endif;
-				else:
+					if ( ! is_tag() && ! is_category() ) {
+						$ticker_query = new WP_Query( $args );
+						if ( $ticker_query->have_posts() ) :
+							$count = 0; ?>
+							<div class='tickercontainer'>
+								<div class='ticker-mask'>
+									<ul id="ticker" class="js-hidden"><?php
+										while( $ticker_query->have_posts() ) :
+											$ticker_query->the_post();
+											$count++;
+											if ( $ticker_ntab == 'on' ) :
+												$target = ' target="_blank"';
+											endif; ?>
+										<li><a href="<?php the_permalink()?>" title="<?php the_title(); ?>"<?php echo esc_attr( $target ); ?>><?php the_title(); ?></a></li><?php
+										endwhile;
+										wp_reset_postdata(); ?>
+									</ul>
+								</div>
+							</div><?php
+						endif;
+					}
+				} else {
 					if ( $ticker_custom ) :
 						$all_custom_texts = explode( "\n", $ticker_custom ); ?>
 						<div class='tickercontainer'>
@@ -99,12 +105,12 @@ if ( !function_exists( 't4bnt_show_news_ticker' ) ) {
 							</div>
 						</div><?php
 					endif;
-				endif;
+				}
 				$post = $orig_post; echo '
 				<script type="text/javascript">';
 					if ( $ticker_effect == 'scroll' ) : echo '
 						jQuery(function() {
-							jQuery("ul#ticker").liScroll({
+							jQuery("#ticker").liScroll({
 								travelocity: '.esc_attr( $scroll_speed );
 								if ( $scroll_control == 'on' ) { echo ',
 								showControls: true';
@@ -113,7 +119,7 @@ if ( !function_exists( 't4bnt_show_news_ticker' ) ) {
 						});';
 					else: echo '
 						jQuery(function () {
-							jQuery("ul#ticker").ticker({
+							jQuery("#ticker").ticker({
 								speed: '.esc_attr( $reveal_speed ).',
 								titleText: "'.esc_attr( $ticker_title ).'",
 								displayType: "'.esc_attr( $ticker_effect ).'",

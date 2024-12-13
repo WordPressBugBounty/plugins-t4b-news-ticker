@@ -1,6 +1,6 @@
 <?php
 /*
- *  T4B News Ticker v1.3.2 - 1 December, 2024
+ *  T4B News Ticker v1.3.3 - 13 December, 2024
  *  By @realwebcare - https://www.realwebcare.com/
  */
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -53,11 +53,11 @@ if ( !function_exists( 't4bnt_sidebar' ) ) {
 			<div id="t4bntusage-info" class="t4bntusage-sidebar">
 				<h3><?php esc_html_e('Plugin Info', 't4b-news-ticker'); ?></h3>
 				<ul class="t4bntusage-list">
-					<li><?php esc_html_e('Version: 1.3.2', 't4b-news-ticker'); ?></li>
+					<li><?php esc_html_e('Version: 1.3.3', 't4b-news-ticker'); ?></li>
 					<li><?php esc_html_e('Scripts: PHP + CSS + JS', 't4b-news-ticker'); ?></li>
 					<li><?php esc_html_e('Requires: Wordpress 5.4+', 't4b-news-ticker'); ?></li>
 					<li><?php esc_html_e('First release: 29 December, 2014', 't4b-news-ticker'); ?></li>
-					<li><?php esc_html_e('Last Update: 1 December, 2024', 't4b-news-ticker'); ?></li>
+					<li><?php esc_html_e('Last Update: 13 December, 2024', 't4b-news-ticker'); ?></li>
 					<li><?php esc_html_e('By', 't4b-news-ticker'); ?>: <a href="https://www.realwebcare.com/" target="_blank"><?php esc_html_e('Realwebcare', 't4b-news-ticker'); ?></a><br/>
 					<li><?php esc_html_e('Need Help', 't4b-news-ticker'); ?>? <a href="https://wordpress.org/support/plugin/t4b-news-ticker/" target="_blank"><?php esc_html_e('Support', 't4b-news-ticker'); ?></a><br/>
                     <li><?php esc_html_e('Like it? Please leave us a', 't4b-news-ticker'); ?> <a target="_blank" href="https://wordpress.org/support/plugin/t4b-news-ticker/reviews/?filter=5/#new-post">&#9733;&#9733;&#9733;&#9733;&#9733;</a> <?php esc_html_e('rating. We highly appreciate your support!', 't4b-news-ticker'); ?><br/>

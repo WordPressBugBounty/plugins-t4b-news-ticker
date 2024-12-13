@@ -1,5 +1,5 @@
 /*!
- * T4B News Ticker v1.3.2 - 1 December, 2024
+ * T4B News Ticker v1.3.3 - 13 December, 2024
  * by @realwebcare - https://www.realwebcare.com/
  */
 jQuery(document).ready(function() {

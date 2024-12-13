@@ -3,7 +3,7 @@
  * Plugin Name:       T4B News Ticker
  * Plugin URI:        http://wordpress.org/plugins/t4b-news-ticker/
  * Description:       T4B News Ticker is a flexible and easy to use WordPress plugin that allow you to make horizontal News Ticker.
- * Version:           1.3.2
+ * Version:           1.3.3
  * Requires at least: 5.2
  * Requires PHP:      7.4
  * Author:            Realwebcare
@@ -16,7 +16,7 @@
 
 /**
  * Main plugin file that initializes and manages the "T4B News Ticker" plugin.
- * @package T4B News Ticker v1.3.2 - 1 December, 2024
+ * @package T4B News Ticker v1.3.3 - 13 December, 2024
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -55,8 +55,8 @@ add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 't4bnt_plugin_ac
 /* Enqueue CSS & JS For Admin */
 if (!function_exists('t4bnt_admin_adding_style')) {
 	function t4bnt_admin_adding_style() {
-		wp_enqueue_script( 't4bnt-admin', plugins_url( 'assets/js/t4bnt_admin.js', __FILE__ ), array('jquery'), '1.3.2', true );
-		wp_enqueue_style( 't4bnt-admin-style', plugins_url( 'assets/css/t4bnt_admin.css', __FILE__ ), '', '1.3.2' );
+		wp_enqueue_script( 't4bnt-admin', plugins_url( 'assets/js/t4bnt_admin.js', __FILE__ ), array('jquery'), '1.3.3', true );
+		wp_enqueue_style( 't4bnt-admin-style', plugins_url( 'assets/css/t4bnt_admin.css', __FILE__ ), '', '1.3.3' );
 	}
 }
 add_action( 'admin_enqueue_scripts', 't4bnt_admin_adding_style' );
@@ -72,16 +72,16 @@ if ( !function_exists('t4bnt_enqueue_scripts') ) {
 
 		if ( $t4bnt_enable == 'on' ) {
 			if ( $ticker_effect == 'scroll' ) {
-				wp_register_script( 'liscroll', plugins_url( 'assets/js/jquery.liscroll.js', __FILE__ ), array('jquery'), '1.3.2', true );
+				wp_register_script( 'liscroll', plugins_url( 'assets/js/jquery.liscroll.js', __FILE__ ), array('jquery'), '1.3.3', true );
 				wp_enqueue_script( 'liscroll' );
 			} else {
-				wp_register_script( 'ticker', plugins_url( 'assets/js/jquery.ticker.js', __FILE__ ), array('jquery'), '1.3.2', true );
+				wp_register_script( 'ticker', plugins_url( 'assets/js/jquery.ticker.js', __FILE__ ), array('jquery'), '1.3.3', true );
 				wp_enqueue_script( 'ticker' );
 			}
 			if ( $ticker_effect == 'scroll' ) {
-				wp_enqueue_style( 't4bnewsticker', plugins_url( 'assets/css/t4bnewsticker.css', __FILE__ ), '', '1.3.2' );
+				wp_enqueue_style( 't4bnewsticker', plugins_url( 'assets/css/t4bnewsticker.css', __FILE__ ), '', '1.3.3' );
 			} else {
-				wp_enqueue_style( 'tickerstyle', plugins_url( 'assets/css/ticker-style.css', __FILE__ ), '', '1.3.2' );
+				wp_enqueue_style( 'tickerstyle', plugins_url( 'assets/css/ticker-style.css', __FILE__ ), '', '1.3.3' );
 			}
 		}
 	}

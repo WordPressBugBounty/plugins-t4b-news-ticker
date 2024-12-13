@@ -8,7 +8,7 @@
  * @link https://tareq.co Tareq Hasan
  * @example example/oop-example.php How to use the class
  *
- *  T4B News Ticker v1.3.2 - 1 December, 2024
+ *  T4B News Ticker v1.3.3 - 13 December, 2024
  *  By @realwebcare - https://www.realwebcare.com/
  */
 if ( !class_exists( 't4bnt_WeDevs_Settings_API' ) ):

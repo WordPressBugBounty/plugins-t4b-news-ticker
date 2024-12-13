@@ -1,6 +1,6 @@
 <?php
 /*
- *  T4B News Ticker v1.3.2 - 1 December, 2024
+ *  T4B News Ticker v1.3.3 - 13 December, 2024
  *  By @realwebcare - https://www.realwebcare.com/
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -248,7 +248,7 @@ if ( !class_exists('t4bnt_settings_config' ) ):
 	}
 endif;
 
-$settings = new t4bnt_settings_config();
+$t4bnt_settings_config = new t4bnt_settings_config();
 
 //--------- trigger setting api class---------------- //
 if ( !function_exists( 't4bnt_get_option' ) ) {

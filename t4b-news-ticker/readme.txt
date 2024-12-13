@@ -1,9 +1,9 @@
 === T4B News Ticker - Responsive News Scroller, Slider, and Animations ===
 Contributors: realwebcare
-Tags: news ticker, scroll, ticker, breaking news, trending news
+Tags: news ticker, scroll, ticker, breaking news, trending
 Requires at least: 5.2
 Tested up to: 6.7.1
-Stable Tag: 1.3.2
+Stable Tag: 1.3.3
 Requires PHP: 7.4
 Donate link: https://www.realwebcare.com/billing/store/support/donation
 License: GPLv2 or later
@@ -80,7 +80,10 @@ T4B News Ticker can be installed in two convenient ways: manually or directly fr
 6. Configure the ticker settings under "Settings" >> "Ticker Settings."
 
 
-== Upgrade Notice ==  
+== Upgrade Notice == 
+
+= 1.3.3 = 
+This update includes a fix for the "Show in Homepage only" option, ensuring the ticker displays correctly on the homepage. It also resolves an issue where the ticker was not showing on tag and category archive pages. Please update to ensure proper functionality.
 
 = 1.3.2 = 
 This version updates the plugin code to align with WordPress coding standards, improving maintainability and compatibility. It also includes a fix for a minor CSS issue. Update now for a cleaner and more robust codebase.
@@ -115,9 +118,13 @@ Fixed jQuery issues to ensure compatibility with WordPress 5.5. Update for conti
 
 == Changelog ==
 
-= 1.3.2 (28th November 2024) =  
+= 1.3.3 (13th December 2024) =
+* Fixed issue with ticker display logic when "Show in Homepage only" option is enabled.
+* Resolved issue where ticker was not displaying on tag and category archive pages (reported by client David).
+
+= 1.3.2 (1st December 2024) =  
 * Updated code to meet WordPress coding standards.
-* Fixed a minor CSS issue.  
+* Fixed a minor CSS issue.
 
 = 1.3.1 (31st July 2024) =
 * Fixed a small bug
