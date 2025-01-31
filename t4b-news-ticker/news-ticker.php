@@ -3,7 +3,7 @@
  * Plugin Name:       T4B News Ticker
  * Plugin URI:        http://wordpress.org/plugins/t4b-news-ticker/
  * Description:       T4B News Ticker is a flexible and easy to use WordPress plugin that allow you to make horizontal News Ticker.
- * Version:           1.3.3
+ * Version:           1.3.4
  * Requires at least: 5.2
  * Requires PHP:      7.4
  * Author:            Realwebcare
@@ -16,22 +16,23 @@
 
 /**
  * Main plugin file that initializes and manages the "T4B News Ticker" plugin.
- * @package T4B News Ticker v1.3.3 - 13 December, 2024
+ * @package T4B News Ticker v1.3.4 - 31 January, 2025
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 define( 'T4BNT_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
+define( 'T4BNT_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'T4BNT_AUF', __FILE__ );
 
-require_once ( T4BNT_PLUGIN_PATH . 'inc/ticker-admin.php' );
+require_once T4BNT_PLUGIN_PATH . 'inc/ticker-admin.php';
 
 /* Internationalization */
 if ( !function_exists('t4bnt_textdomain') ) {
 	function t4bnt_textdomain() {
 		$locale = apply_filters( 'plugin_locale', get_locale(), 't4b-news-ticker' );
 		load_textdomain( 't4b-news-ticker', trailingslashit( WP_PLUGIN_DIR ) . 't4b-news-ticker/languages/t4b-news-ticker-' . $locale . '.mo' );
-		load_plugin_textdomain( 't4b-news-ticker', FALSE, basename( dirname( __FILE__ ) ) . '/languages/' );
+		load_plugin_textdomain( 't4b-news-ticker', false, plugin_dir_path( __FILE__ ) . 'languages' );
 	}
 }
 add_action( 'init', 't4bnt_textdomain' );
@@ -55,8 +56,8 @@ add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 't4bnt_plugin_ac
 /* Enqueue CSS & JS For Admin */
 if (!function_exists('t4bnt_admin_adding_style')) {
 	function t4bnt_admin_adding_style() {
-		wp_enqueue_script( 't4bnt-admin', plugins_url( 'assets/js/t4bnt_admin.js', __FILE__ ), array('jquery'), '1.3.3', true );
-		wp_enqueue_style( 't4bnt-admin-style', plugins_url( 'assets/css/t4bnt_admin.css', __FILE__ ), '', '1.3.3' );
+		wp_enqueue_script( 't4bnt-admin', T4BNT_PLUGIN_URL . 'assets/js/t4bnt_admin.js', array('jquery'), '1.3.4', true );
+		wp_enqueue_style( 't4bnt-admin-style', T4BNT_PLUGIN_URL . 'assets/css/t4bnt_admin.css', '', '1.3.4' );
 	}
 }
 add_action( 'admin_enqueue_scripts', 't4bnt_admin_adding_style' );
@@ -72,18 +73,76 @@ if ( !function_exists('t4bnt_enqueue_scripts') ) {
 
 		if ( $t4bnt_enable == 'on' ) {
 			if ( $ticker_effect == 'scroll' ) {
-				wp_register_script( 'liscroll', plugins_url( 'assets/js/jquery.liscroll.js', __FILE__ ), array('jquery'), '1.3.3', true );
-				wp_enqueue_script( 'liscroll' );
+				wp_enqueue_script( 't4bnt-liscroll', T4BNT_PLUGIN_URL . 'assets/js/jquery.liscroll.js', array('jquery'), '1.3.4', true );
 			} else {
-				wp_register_script( 'ticker', plugins_url( 'assets/js/jquery.ticker.js', __FILE__ ), array('jquery'), '1.3.3', true );
-				wp_enqueue_script( 'ticker' );
+				wp_enqueue_script( 't4bnt-ticker', T4BNT_PLUGIN_URL . 'assets/js/jquery.ticker.js', array('jquery'), '1.3.4', true );
 			}
 			if ( $ticker_effect == 'scroll' ) {
-				wp_enqueue_style( 't4bnewsticker', plugins_url( 'assets/css/t4bnewsticker.css', __FILE__ ), '', '1.3.3' );
+				wp_enqueue_style( 't4bnewsticker', T4BNT_PLUGIN_URL . 'assets/css/t4bnewsticker.css', '', '1.3.4' );
 			} else {
-				wp_enqueue_style( 'tickerstyle', plugins_url( 'assets/css/ticker-style.css', __FILE__ ), '', '1.3.3' );
+				wp_enqueue_style( 'tickerstyle', T4BNT_PLUGIN_URL . 'assets/css/ticker-style.css', '', '1.3.4' );
 			}
 		}
 	}
 }
 add_action( 'wp_enqueue_scripts', 't4bnt_enqueue_scripts' );
+
+/**
+ * Modifies the main query for news ticker posts.
+ * This function ensures that the ticker posts query is not modified on category and tag pages.
+ * It is hooked into the 'pre_get_posts' action to filter the query before it's executed.
+ *
+ * @param WP_Query $query The query object that is being modified.
+ * @return void
+ */
+function t4bnt_modify_ticker_query( $query ) {
+    // Check if it's not the admin area, it's the main query, and the page is either a category or tag page
+    if ( ! is_admin() && $query->is_main_query() && ( $query->is_category() || $query->is_tag() ) ) {
+        return; // Do not alter the main query on category and tag pages
+    }
+}
+add_action( 'pre_get_posts', 't4bnt_modify_ticker_query' );
+
+/**
+ * Generates the JavaScript for the scroll effect of the news ticker.
+ *
+ * @param array $settings An associative array of settings for the ticker. Default settings include:
+ * 		- 'speed' (scroll speed)
+ *      - 'control' (whether to show scroll controls)
+ * @return string The JavaScript code to enable the scroll effect.
+ */
+function t4bnt_scroll_ticker_script( $settings = array() ) {
+	$script  = 'jQuery(function($) {';
+	$script .= '$("#ticker").liScroll({';
+	$script .= 'travelocity: '. esc_js( $settings['speed'] ) . ',';
+	if ( isset( $settings['control'] ) && $settings['control'] == 'on' ) {
+		$script .= 'showControls: true';
+	}
+	$script .= '});';
+	$script .= '});';
+
+	return $script;
+}
+
+/**
+ * Generates the JavaScript for the non-scroll (ticker) effect of the news ticker.
+ *
+ * @param array $settings An associative array of settings for the ticker. Default settings include:
+ *		- 'speed' (ticker animation speed)
+ *      - 'title' (ticker title text)
+ *      - 'effect' (type of animation effect)
+ *      - 'timeout' (pause duration between items)
+ * @return string The JavaScript code to enable the ticker effect.
+ */
+function t4bnt_non_scroll_switch( $settings = array() ) {
+	$script  = 'jQuery(function($) {';
+	$script .= '$("#ticker").ticker({';
+	$script .= 'speed: '. esc_js( $settings['speed'] ) . ',';
+	$script .= 'titleText: "'. esc_js( $settings['title'] ) . '",';
+	$script .= 'displayType: "'. esc_js( $settings['effect'] ) . '",';
+	$script .= 'pauseOnItems: '. esc_js( $settings['timeout'] ) . ',';
+	$script .= '});';
+	$script .= '});';
+
+	return $script;
+}

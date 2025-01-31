@@ -8,7 +8,7 @@
  * @link https://tareq.co Tareq Hasan
  * @example example/oop-example.php How to use the class
  *
- *  T4B News Ticker v1.3.3 - 13 December, 2024
+ *  T4B News Ticker v1.3.4 - 31 January, 2025
  *  By @realwebcare - https://www.realwebcare.com/
  */
 if ( !class_exists( 't4bnt_WeDevs_Settings_API' ) ):
@@ -278,7 +278,7 @@ class t4bnt_WeDevs_Settings_API {
 		
 		if( $args['id'] == 'ticker_tag' ) {
 			$tags = get_tags('orderby=count&order=desc&number=500');
-			$html       .= '<a style="cursor:pointer" title="Choose from the most used tags" onclick="toggleVisibility('."'".$args['id']."_tags'".')"><img src="'. WP_PLUGIN_URL . '/t4b-news-ticker/assets/images/expand.png" alt="expand"></a>
+			$html       .= '<a style="cursor:pointer" title="Choose from the most used tags" onclick="toggleVisibility('."'".$args['id']."_tags'".')"><img src="'. esc_url( T4BNT_PLUGIN_URL . 'assets/images/expand.png' ) .'" alt="expand"></a>
 			<span class="tags-list" id="'.$args['id'].'_tags">';
 			foreach ($tags as $tag) {
 				$html       .= '<a style="cursor:pointer" onclick="if('.$args['id'].'.value != '."''".'){ var sep = '."', '".'}else{var sep = '."''".'} '.$args['id'].'.value='.$args['id'].'.value+sep+(this.rel);" rel="' . $tag->name . '">' . $tag->name . '</a>';
@@ -326,7 +326,7 @@ class t4bnt_WeDevs_Settings_API {
         $value = esc_attr( $this->get_option( $args['id'], $args['section'], $args['std'] ) );
         $size  = isset( $args['size'] ) && !is_null( $args['size'] ) ? $args['size'] : 'regular';
         $id    = $args['section']  . '[' . $args['id'] . ']';
-        $label = isset( $args['options']['button_label'] ) ? $args['options']['button_label'] : __( 'Choose File' );
+        $label = isset( $args['options']['button_label'] ) ? $args['options']['button_label'] : __( 'Choose File', 't4b-news-ticker' );
         $html  = sprintf( '<input type="text" class="%1$s-text wpsa-url" id="%2$s[%3$s]" name="%2$s[%3$s]" value="%4$s"/>', $size, $args['section'], $args['id'], $value );
         $html  .= '<input type="button" class="button wpsa-browse" value="' . $label . '" />';
         $html  .= $this->get_field_description( $args );

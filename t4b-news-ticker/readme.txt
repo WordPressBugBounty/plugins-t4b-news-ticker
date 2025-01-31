@@ -14,15 +14,22 @@ T4B News Ticker is a flexible and user-friendly news ticker plugin for WordPress
 
 
 == Description ==
-With T4B News Ticker, you can add dynamic news content to your website in an eye-catching manner. Whether you're showcasing the latest updates, announcements, or breaking news, this plugin offers a seamless solution. Choose from four captivating animation effects: fade, slide, ticker, and scroll, to suit your website's aesthetics.
+### Dynamic News Presentation
+With **T4B News Ticker**, you can add dynamic news content to your website in an eye-catching manner. Whether you're showcasing the latest updates, announcements, or breaking news, this plugin offers a seamless solution. Choose from four captivating animation effects: fade, slide, ticker, and scroll, to suit your website's aesthetics.
 
+[FREE VERSION DEMO](https://www.realwebcare.com/demo/t4b-news-ticker-responsive-news-scroller-slider-and-animations/) | [PRO VERSION DEMO](https://www.realwebcare.com/demo/?product_id=t4b-news-ticker-pro) | **[LIMITED TIME: PRO NOW ONLY $10!](https://www.realwebcare.com/item/wp-news-ticker-t4b-news-ticker-pro-dynamic-scrolling-plugin/)** | [CONTACT US](https://www.realwebcare.com/billing/submitticket.php?step=2&deptid=6)
+
+= Watch Free Version Video Walkthrough =
+https://youtu.be/CX72IvU51SY
+
+### Flexible Content Sources
 What sets T4B News Ticker apart is its flexibility in content sources. You can display tickers based on specific post categories, relevant tags, or even craft custom text messages with associated links. Simply compose your custom content using the default WordPress post editor.
 
+### Complete Control Over Appearance
 Take full control over the ticker's appearance and behavior. Adjust the scrolling speed to match your preferences and fine-tune the typography to ensure the ticker seamlessly blends with your website's design. Easily integrate the ticker into your posts, pages, or theme files using the provided shortcode.
 
-
 <blockquote>
-<h4>Upgrade to Premium</h4>
+<h3>Upgrade to Premium</h3>
 <p>Unlock more animation effects, play/pause option for all animation types, and enhanced customization with dedicated support.</p>
 <p><strong>Premium features of T4B News Ticker:</strong></p>
 <ul>
@@ -38,17 +45,7 @@ Take full control over the ticker's appearance and behavior. Adjust the scrollin
 <p><a href="https://www.realwebcare.com/item/wp-news-ticker-t4b-news-ticker-pro-dynamic-scrolling-plugin/">Explore Premium features</a></p>
 </blockquote>
 
-
-== Demo ==
-
-= View demo of T4B News Ticker Pro =
-[DEMO](https://www.realwebcare.com/demo/?product_id=t4b-news-ticker-pro)
-
-= Watch the video demo of T4B News Ticker =
-[youtube https://www.youtube.com/watch?v=CX72IvU51SY]
-
-= Watch Pro Version Video Walkthrough =
-[Click to Watch Pro Version](https://www.youtube.com/watch?v=IR-K0KuQ8Fc)
+[**Click to Watch Pro Version Walkthrough**](https://www.youtube.com/watch?v=IR-K0KuQ8Fc)
 
 
 == Key Features ==
@@ -80,7 +77,10 @@ T4B News Ticker can be installed in two convenient ways: manually or directly fr
 6. Configure the ticker settings under "Settings" >> "Ticker Settings."
 
 
-== Upgrade Notice == 
+== Upgrade Notice ==
+
+= 1.3.4 =
+We've added the option to disable the ticker on tag/category pages from the settings, improved the script handling, and optimized the behavior of the ticker. If you have been experiencing issues with the ticker on category or tag pages, you can now disable it easily via the plugin settings. Make sure to check your settings after upgrading.
 
 = 1.3.3 = 
 This update includes a fix for the "Show in Homepage only" option, ensuring the ticker displays correctly on the homepage. It also resolves an issue where the ticker was not showing on tag and category archive pages. Please update to ensure proper functionality.
@@ -94,29 +94,12 @@ This version includes a small bug fix and ensures compatibility with WordPress 6
 = 1.3 =  
 Fixed several URL-related issues and made the plugin compatible with WordPress 6.5.2. Upgrade to maintain functionality with the latest WordPress release.
 
-= 1.2.9 =  
-Resolved full-width display issues for animation effects and improved internationalization. This update also includes better translation escaping and text domain standardization. Update to ensure optimal plugin performance.
-
-= 1.2.8 =  
-Introduced pause, play, next, and previous controls for ticker scrolling, along with fixes for JavaScript bugs. Compatible with WordPress 6.3. Upgrade to access these new features and enhancements.
-
-= 1.2.7 =  
-Fixed full-width issues for various animation effects and ensured compatibility with the latest WordPress version. Update to enjoy smoother animations.
-
-= 1.2.6 =  
-Addressed scrolling information loading time issues. Update to improve performance.
-
-= 1.2.5 =  
-Fixed a critical jQuery bug. Update to avoid functionality disruptions.
-
-= 1.2.4 =  
-Resolved the 10-second gap between loops and text wrapping issues in animations. Update to improve animation flow.
-
-= 1.2.3 =  
-Fixed jQuery issues to ensure compatibility with WordPress 5.5. Update for continued functionality with WordPress updates.
-
 
 == Changelog ==
+
+= 1.3.4 (31 January, 2025) ==
+* Added option to disable the ticker on tag/category archive pages via plugin settings.
+* Refined the conditional logic for showing the ticker on the homepage and category/tag pages for better control over where the ticker appears.
 
 = 1.3.3 (13th December 2024) =
 * Fixed issue with ticker display logic when "Show in Homepage only" option is enabled.

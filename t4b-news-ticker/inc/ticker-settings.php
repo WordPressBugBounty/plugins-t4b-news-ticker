@@ -1,6 +1,6 @@
 <?php
 /*
- *  T4B News Ticker v1.3.3 - 13 December, 2024
+ *  T4B News Ticker v1.3.4 - 31 January, 2025
  *  By @realwebcare - https://www.realwebcare.com/
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -58,6 +58,13 @@ if ( !class_exists('t4bnt_settings_config' ) ):
 						'name'				=> 'ticker_home',
 						'label'				=> __( 'Show in Homepage Only', 't4b-news-ticker' ),
 						'desc'				=> __( 'Select if you want to show the News Ticker only in homepage.', 't4b-news-ticker' ),
+						'type'				=> 'checkbox',
+						'default'			=> 'off'
+					),
+					array(
+						'name'				=> 'ticker_taxon',
+						'label'				=> __( 'Disable on Tag/Category Page', 't4b-news-ticker' ),
+						'desc'				=> __( 'Select if you want to hide the ticker on tags and category archive page', 't4b-news-ticker' ),
 						'type'				=> 'checkbox',
 						'default'			=> 'off'
 					),
@@ -129,7 +136,7 @@ if ( !class_exists('t4bnt_settings_config' ) ):
 					array(
 						'name'    			=> 'ticker_type',
 						'label'   			=> __( 'News Ticker Type', 't4b-news-ticker' ),
-						'desc'   			=> __( '', 't4b-news-ticker' ),
+						'desc'   			=> '',
 						'type'    			=> 'radio',
 						'default'           => 'category',
 						'options' 			=> array(
@@ -150,7 +157,7 @@ if ( !class_exists('t4bnt_settings_config' ) ):
 						'name'              => 'ticker_tag',
 						'label'             => __( 'Select News Ticker Tags', 't4b-news-ticker' ),
 						'desc'              => __( 'Select tag names seprated by comma.', 't4b-news-ticker' ),
-						'placeholder'       => __( '', 't4b-news-ticker' ),
+						'placeholder'       => '',
 						'type'              => 'textarea',
 					),
 					array(
@@ -166,7 +173,7 @@ if ( !class_exists('t4bnt_settings_config' ) ):
 					array(
 						'name'      		=> 'ticker_order',
 						'label'     		=> __( 'Select Post Order', 't4b-news-ticker' ),
-						'desc'      		=> __( '', 't4b-news-ticker' ),
+						'desc'      		=> '',
 						'type'      		=> 'select',
 						'default'   		=> 'DESC',
 						'options'   		=> array(
@@ -177,7 +184,7 @@ if ( !class_exists('t4bnt_settings_config' ) ):
 					array(
 						'name'      		=> 'ticker_order_by',
 						'label'     		=> __( 'Select Post Order By', 't4b-news-ticker' ),
-						'desc'      		=> __( '', 't4b-news-ticker' ),
+						'desc'      		=> '',
 						'type'      		=> 'select',
 						'default'   		=> 'date',
 						'options'   		=> array(
