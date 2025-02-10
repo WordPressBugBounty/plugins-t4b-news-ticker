@@ -2,8 +2,8 @@
 Contributors: realwebcare
 Tags: news ticker, scroll, ticker, breaking news, trending
 Requires at least: 5.2
-Tested up to: 6.7.1
-Stable Tag: 1.3.3
+Tested up to: 6.7
+Stable Tag: 1.4.0
 Requires PHP: 7.4
 Donate link: https://www.realwebcare.com/billing/store/support/donation
 License: GPLv2 or later
@@ -17,7 +17,7 @@ T4B News Ticker is a flexible and user-friendly news ticker plugin for WordPress
 ### Dynamic News Presentation
 With **T4B News Ticker**, you can add dynamic news content to your website in an eye-catching manner. Whether you're showcasing the latest updates, announcements, or breaking news, this plugin offers a seamless solution. Choose from four captivating animation effects: fade, slide, ticker, and scroll, to suit your website's aesthetics.
 
-[FREE VERSION DEMO](https://www.realwebcare.com/demo/t4b-news-ticker-responsive-news-scroller-slider-and-animations/) | [PRO VERSION DEMO](https://www.realwebcare.com/demo/?product_id=t4b-news-ticker-pro) | **[LIMITED TIME: PRO NOW ONLY $10!](https://www.realwebcare.com/item/wp-news-ticker-t4b-news-ticker-pro-dynamic-scrolling-plugin/)** | [CONTACT US](https://www.realwebcare.com/billing/submitticket.php?step=2&deptid=6)
+[FREE VERSION DEMO](https://www.realwebcare.com/demo/t4b-news-ticker-responsive-news-scroller-slider-and-animations/) | [PRO VERSION DEMO](https://www.realwebcare.com/demo/?product_id=t4b-news-ticker-pro) | [CONTACT US](https://www.realwebcare.com/billing/submitticket.php?step=2&deptid=6)
 
 = Watch Free Version Video Walkthrough =
 https://youtu.be/CX72IvU51SY
@@ -42,7 +42,7 @@ Take full control over the ticker's appearance and behavior. Adjust the scrollin
 <li>Copy existing tickers for easy replication.</li>
 <li>RTL (Right-to-Left) language support.</li>
 </ul>
-<p><a href="https://www.realwebcare.com/item/wp-news-ticker-t4b-news-ticker-pro-dynamic-scrolling-plugin/">Explore Premium features</a></p>
+<p><a href="https://www.realwebcare.com/item/t4b-news-ticker-pro-best-scrolling-news-ticker/">Explore Premium features</a></p>
 </blockquote>
 
 [**Click to Watch Pro Version Walkthrough**](https://www.youtube.com/watch?v=IR-K0KuQ8Fc)
@@ -79,8 +79,11 @@ T4B News Ticker can be installed in two convenient ways: manually or directly fr
 
 == Upgrade Notice ==
 
+= 1.4.0 =
+This update includes OOP implementation, a `rand` option for random content, settings removal on uninstallation, and a max length for ticker content. The admin interface is improved, and settings have moved to the `T4B Ticker` menu. A Help page with usage instructions has been added.
+
 = 1.3.4 =
-We've added the option to disable the ticker on tag/category pages from the settings, improved the script handling, and optimized the behavior of the ticker. If you have been experiencing issues with the ticker on category or tag pages, you can now disable it easily via the plugin settings. Make sure to check your settings after upgrading.
+Added the option to disable the ticker on tag/category pages, improved the script handling, and optimized the behavior of the ticker. You can also disable it easily via the plugin settings. Make sure to check your settings after upgrading.
 
 = 1.3.3 = 
 This update includes a fix for the "Show in Homepage only" option, ensuring the ticker displays correctly on the homepage. It also resolves an issue where the ticker was not showing on tag and category archive pages. Please update to ensure proper functionality.
@@ -97,7 +100,17 @@ Fixed several URL-related issues and made the plugin compatible with WordPress 6
 
 == Changelog ==
 
-= 1.3.4 (31 January, 2025) ==
+= 1.4.0 (10 February 2025) =
+* Major update with complete Object-Oriented Programming (OOP) implementation.
+* Added `rand` option in post order settings to display content randomly.
+* Added option to remove plugin settings from the database on uninstallation.
+* Introduced maximum length setting for ticker content.
+* Ensured full compliance with WordPress coding standards.
+* Moved the News Ticker settings from `Settings >> Ticker Settings` to the `T4B Ticker` menu in the main WordPress admin.
+* Improved the admin interface for a more modern and user-friendly experience.
+* Added a Help page with plugin features and usage instructions.
+
+= 1.3.4 (31 January, 2025) =
 * Added option to disable the ticker on tag/category archive pages via plugin settings.
 * Refined the conditional logic for showing the ticker on the homepage and category/tag pages for better control over where the ticker appears.
 
@@ -227,6 +240,7 @@ Ensure that the shortcode is correctly placed and the plugin is active. If the i
 
 == Screenshots ==
 1. T4B News Ticker Demo.
-2. T4B News Ticker Settings using post category.
-3. T4B News Ticker Settings using post tags.
-4. T4B News Ticker Settings using custom texts.
+2. T4B News Ticker General Settings Tab.
+3. T4B News Ticker Content Settings Tab.
+4. T4B News Ticker Content Settings Using Custom Texts.
+5. T4B News Ticker Advance Settings Tab.
