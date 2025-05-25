@@ -2,8 +2,8 @@
 Contributors: realwebcare
 Tags: news ticker, scroll, ticker, breaking news, trending
 Requires at least: 5.2
-Tested up to: 6.7
-Stable Tag: 1.4.0
+Tested up to: 6.8
+Stable Tag: 1.4.1
 Requires PHP: 7.4
 Donate link: https://www.realwebcare.com/billing/store/support/donation
 License: GPLv2 or later
@@ -17,7 +17,7 @@ T4B News Ticker is a flexible and user-friendly news ticker plugin for WordPress
 ### Dynamic News Presentation
 With **T4B News Ticker**, you can add dynamic news content to your website in an eye-catching manner. Whether you're showcasing the latest updates, announcements, or breaking news, this plugin offers a seamless solution. Choose from four captivating animation effects: fade, slide, ticker, and scroll, to suit your website's aesthetics.
 
-[FREE VERSION DEMO](https://www.realwebcare.com/demo/t4b-news-ticker-responsive-news-scroller-slider-and-animations/) | [PRO VERSION DEMO](https://www.realwebcare.com/demo/?product_id=t4b-news-ticker-pro) | [CONTACT US](https://www.realwebcare.com/billing/submitticket.php?step=2&deptid=6)
+[FREE VERSION DEMO](https://www.realwebcare.com/demo/t4b-news-ticker-responsive-news-scroller-slider-and-animations/) | [PRO VERSION DEMO](https://www.realwebcare.com/demo/?product_id=t4b-news-ticker-pro) | [EXPLORE PRO](https://www.realwebcare.com/item/wp-news-ticker-t4b-news-ticker-pro-dynamic-scrolling-plugin/) | [TEST DRIVE PRO](https://sandbox.realwebcare.com/sandbox-demo-creator-t4b-news-ticker/)
 
 = Watch Free Version Video Walkthrough =
 https://youtu.be/CX72IvU51SY
@@ -42,7 +42,7 @@ Take full control over the ticker's appearance and behavior. Adjust the scrollin
 <li>Copy existing tickers for easy replication.</li>
 <li>RTL (Right-to-Left) language support.</li>
 </ul>
-<p><a href="https://www.realwebcare.com/item/t4b-news-ticker-pro-best-scrolling-news-ticker/">Explore Premium features</a></p>
+<p><a href="https://www.realwebcare.com/item/wp-news-ticker-t4b-news-ticker-pro-dynamic-scrolling-plugin/">Explore Premium features</a></p>
 </blockquote>
 
 [**Click to Watch Pro Version Walkthrough**](https://www.youtube.com/watch?v=IR-K0KuQ8Fc)
@@ -79,6 +79,9 @@ T4B News Ticker can be installed in two convenient ways: manually or directly fr
 
 == Upgrade Notice ==
 
+= 1.4.1 =
+This update fixes the news ticker not animating in block themes like Twenty Twenty-Four and Twenty Twenty-Five, optimizes script loading, and improves settings validation. Update to ensure reliable ticker display.
+
 = 1.4.0 =
 This update includes OOP implementation, a `rand` option for random content, settings removal on uninstallation, and a max length for ticker content. The admin interface is improved, and settings have moved to the `T4B Ticker` menu. A Help page with usage instructions has been added.
 
@@ -94,11 +97,13 @@ This version updates the plugin code to align with WordPress coding standards, i
 = 1.3.1 =  
 This version includes a small bug fix and ensures compatibility with WordPress 6.6.1. Update now for a smoother experience.
 
-= 1.3 =  
-Fixed several URL-related issues and made the plugin compatible with WordPress 6.5.2. Upgrade to maintain functionality with the latest WordPress release.
-
 
 == Changelog ==
+
+= 1.4.1 (25 May 2025) =
+* Fixed news ticker not initializing in block themes like Twenty Twenty-Four and Twenty Twenty-Five, ensuring reliable animation.
+* Optimized script/style enqueuing to load only when shortcode is used.
+* Fixed settings validation and sidebar return type.
 
 = 1.4.0 (10 February 2025) =
 * Major update with complete Object-Oriented Programming (OOP) implementation.

@@ -3,7 +3,7 @@
  * Plugin Name:       T4B News Ticker
  * Plugin URI:        http://wordpress.org/plugins/t4b-news-ticker/
  * Description:       T4B News Ticker is a flexible and easy to use WordPress plugin that allow you to make horizontal News Ticker.
- * Version:           1.4.0
+ * Version:           1.4.1
  * Requires at least: 5.2
  * Requires PHP:      7.4
  * Author:            Realwebcare
@@ -53,11 +53,11 @@ if ( ! class_exists('T4BNT_Index') ) {
          * @return void
          */
         public function t4bnt_check_version() {
-            $current_version = '1.4.0'; // Set to the version that requires updates
+            $current_version = '1.4.1'; // Set to the version that requires updates
             $saved_version = get_option( 't4bnt_plugin_version', '' ); // Handle missing option
         
             // Run only for users below 1.4.0
-            if ( empty($saved_version) || version_compare($saved_version, '1.4.0', '<') ) {
+            if ( empty($saved_version) || version_compare($saved_version, '1.4.1', '<') ) {
                 // Perform required option updates (only needed once)
                 $old_version_options = get_option( 't4bnt_general' );
 

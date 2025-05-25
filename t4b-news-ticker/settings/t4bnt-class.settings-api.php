@@ -11,7 +11,7 @@
  * @link https://tareq.co Tareq Hasan
  * @example example/oop-example.php How to use the class
  *
- * @package T4B News Ticker v1.4.0 - 10 February, 2025
+ * @package T4B News Ticker v1.4.1 - 25 May, 2025
  * @link https://www.realwebcare.com/
  */
 if ( !class_exists( 'T4BNT_WeDevs_Settings_API' ) ):
@@ -202,14 +202,24 @@ if ( !class_exists( 'T4BNT_WeDevs_Settings_API' ) ):
          * @param array   $args settings field args
          */
         function callback_number( $args ) {
-            $value       = esc_attr( $this->get_option( $args['id'], $args['section'], $args['std'] ) );
-            $size        = isset( $args['size'] ) && ! is_null( $args['size'] ) ? esc_attr( $args['size'] ) : 'regular';
-            $type        = isset( $args['type'] ) ? esc_attr( $args['type'] ) : 'number';
+            $value       = $this->get_option( $args['id'], $args['section'], $args['std'] );
+
+            // Validate value against min/max
+            if ( isset( $args['min'] ) && $args['min'] !== '' && floatval($value) < floatval($args['min']) ) {
+                $value = $args['std']; // Fallback to default if below min
+            }
+            if ( isset( $args['max'] ) && $args['max'] !== '' && floatval($value) > floatval($args['max']) ) {
+                $value = $args['std']; // Fallback to default if above max
+            }
+
+            $value = esc_attr( $value );
+            $size = isset( $args['size'] ) && ! is_null( $args['size'] ) ? esc_attr( $args['size'] ) : 'regular';
+            $type = isset( $args['type'] ) ? esc_attr( $args['type'] ) : 'number';
             $placeholder = ! empty( $args['placeholder'] ) ? ' placeholder="' . esc_attr( $args['placeholder'] ) . '"' : '';
-            $min         = isset( $args['min'] ) && $args['min'] !== '' ? ' min="' . esc_attr( $args['min'] ) . '"' : '';
-            $max         = isset( $args['max'] ) && $args['max'] !== '' ? ' max="' . esc_attr( $args['max'] ) . '"' : '';
-            $step        = isset( $args['step'] ) && $args['step'] !== '' ? ' step="' . esc_attr( $args['step'] ) . '"' : '';
-        
+            $min = isset( $args['min'] ) && $args['min'] !== '' ? ' min="' . esc_attr( $args['min'] ) . '"' : '';
+            $max = isset( $args['max'] ) && $args['max'] !== '' ? ' max="' . esc_attr( $args['max'] ) . '"' : '';
+            $step = isset( $args['step'] ) && $args['step'] !== '' ? ' step="' . esc_attr( $args['step'] ) . '"' : '';
+
             $html = sprintf(
                 '<input type="%1$s" class="%2$s-number" id="%3$s[%4$s]" name="%3$s[%4$s]" value="%5$s"%6$s%7$s%8$s%9$s/>',
                 $type, $size, esc_attr( $args['section'] ), esc_attr( $args['id'] ), $value, $placeholder, $min, $max, $step
@@ -217,7 +227,7 @@ if ( !class_exists( 'T4BNT_WeDevs_Settings_API' ) ):
         
             // Add the description field with proper escaping
             $html .= $this->get_field_description( $args );
-        
+
             // Output the HTML
             echo $html; // No escaping needed as all dynamic parts are already escaped
         }
@@ -353,9 +363,9 @@ if ( !class_exists( 'T4BNT_WeDevs_Settings_API' ) ):
 
         /**
          * Displays the html for a settings field
-         *
-         * @param array   $args settings field args
-         * @return string
+         * 
+         * @param mixed $args
+         * @return void
          */
         function callback_html( $args ) {
             // Add the description field with escaping
