@@ -11,7 +11,7 @@
  * @link https://tareq.co Tareq Hasan
  * @example example/oop-example.php How to use the class
  *
- * @package T4B News Ticker v1.4.1 - 25 May, 2025
+ * @package T4B News Ticker v1.4.2 - 30 May, 2025
  * @link https://www.realwebcare.com/
  */
 if ( !class_exists( 'T4BNT_WeDevs_Settings_API' ) ):
@@ -38,8 +38,8 @@ if ( !class_exists( 'T4BNT_WeDevs_Settings_API' ) ):
          */
         function admin_enqueue_scripts() {
             wp_enqueue_script( 'jquery' );
-            wp_enqueue_script( 't4bnt-admin', T4BNT_PLUGIN_URL . 'assets/js/t4bnt-admin.js', array('jquery'), '1.3.4', array( 'in_footer' => true ) );
-            wp_enqueue_style( 't4bnt-admin', T4BNT_PLUGIN_URL . 'assets/css/t4bnt-admin.css', array(), '1.3.4' );
+            wp_enqueue_script( 't4bnt-admin', T4BNT_PLUGIN_URL . 'assets/js/t4bnt-admin.js', array('jquery'), '1.4.1', array( 'in_footer' => true ) );
+            wp_enqueue_style( 't4bnt-admin', T4BNT_PLUGIN_URL . 'assets/css/t4bnt-admin.css', array(), '1.4.1' );
         }
         /**
          * Set settings sections

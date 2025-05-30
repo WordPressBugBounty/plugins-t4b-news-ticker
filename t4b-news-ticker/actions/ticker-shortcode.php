@@ -7,7 +7,7 @@
  * and renders the news ticker based on the provided settings. The class also ensures proper 
  * sanitization and validation of all inputs and options to maintain security and data integrity.
  *
- * @package T4B News Ticker v1.4.1 - 25 May, 2025
+ * @package T4B News Ticker v1.4.2 - 30 May, 2025
  * @link https://www.realwebcare.com/
  */
 if (!defined('ABSPATH'))
@@ -203,18 +203,17 @@ if (!class_exists('T4BNT_Shortcode')) {
 					endif;
 				endif;
 
-				// Enqueue scripts and styles
-				if ($ticker_effect == 'scroll') {
-					wp_enqueue_script('t4bnt-script', T4BNT_PLUGIN_URL . 'assets/js/t4bnt.liscroll.js', array('jquery'), '1.4.1', true);
-					wp_enqueue_style('t4bnt-style', T4BNT_PLUGIN_URL . 'assets/css/t4bnt-styles.css', [], '1.4.1');
-				} else {
-					wp_enqueue_script('t4bnt-script', T4BNT_PLUGIN_URL . 'assets/js/t4bnt.atickers.js', array('jquery'), '1.4.1', true);
-					wp_enqueue_style('t4bnt-style', T4BNT_PLUGIN_URL . 'assets/css/t4bnt-scroll.css', [], '1.4.1');
-				}
-
 				// Add inline script
 				$script = $ticker_effect == 'scroll' ? $this->get_functions->t4bnt_scroll_ticker_script($data) : $this->get_functions->t4bnt_non_scroll_switch($data);
-				wp_add_inline_script('t4bnt-script', $script);
+
+				// Decide which handler to attach the inline script
+				if (wp_script_is('t4bnt-script', 'enqueued')) {
+					wp_add_inline_script('t4bnt-script', $script);
+				} else {
+					wp_register_script('t4bnt-init', false, [], '1.4.2', ['in_footer' => true]);
+					wp_enqueue_script('t4bnt-init');
+					wp_add_inline_script('t4bnt-init', $script);
+				}
 				?>
 				</div>
 				<!-- .ticker-news -->

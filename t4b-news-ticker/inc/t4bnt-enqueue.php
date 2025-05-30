@@ -7,7 +7,7 @@
  * Methods:
  * - t4bnt_enqueue_script(): Enqueues the necessary CSS and JS files for the front-end.
  *
- * @package T4B News Ticker v1.4.0 - 10 February, 2025
+ * @package T4B News Ticker v1.4.2 - 30 May, 2025
  * @link https://www.realwebcare.com/
  */
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -42,14 +42,14 @@ if ( ! class_exists( 'T4BNT_WP_Enqueue' ) ) {
     
             if ( $t4bnt_enable == 'on' ) {
                 if ( $ticker_effect == 'scroll' ) {
-                    wp_enqueue_script( 't4bnt-script', T4BNT_PLUGIN_URL . 'assets/js/t4bnt.liscroll.js', array('jquery'), '1.4.0', true );
+                    wp_enqueue_script( 't4bnt-script', T4BNT_PLUGIN_URL . 'assets/js/t4bnt.liscroll.js', array('jquery'), '1.4.2', ['in_footer' => true] );
                 } else {
-                    wp_enqueue_script( 't4bnt-script', T4BNT_PLUGIN_URL . 'assets/js/t4bnt.atickers.js', array('jquery'), '1.4.0', true );
+                    wp_enqueue_script( 't4bnt-script', T4BNT_PLUGIN_URL . 'assets/js/t4bnt.atickers.js', array('jquery'), '1.4.2', ['in_footer' => true] );
                 }
                 if ( $ticker_effect == 'scroll' ) {
-                    wp_enqueue_style( 't4bnt-style', T4BNT_PLUGIN_URL . 'assets/css/t4bnt-styles.css', '', '1.4.0' );
+                    wp_enqueue_style( 't4bnt-style', T4BNT_PLUGIN_URL . 'assets/css/t4bnt-styles.css', [], '1.4.2' );
                 } else {
-                    wp_enqueue_style( 't4bnt-style', T4BNT_PLUGIN_URL . 'assets/css/t4bnt-scroll.css', '', '1.4.0' );
+                    wp_enqueue_style( 't4bnt-style', T4BNT_PLUGIN_URL . 'assets/css/t4bnt-scroll.css', [], '1.4.2' );
                 }
             }
         }

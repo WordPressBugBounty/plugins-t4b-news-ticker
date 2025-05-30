@@ -3,7 +3,7 @@ Contributors: realwebcare
 Tags: news ticker, scroll, ticker, breaking news, trending
 Requires at least: 5.2
 Tested up to: 6.8
-Stable Tag: 1.4.1
+Stable Tag: 1.4.2
 Requires PHP: 7.4
 Donate link: https://www.realwebcare.com/billing/store/support/donation
 License: GPLv2 or later
@@ -79,6 +79,9 @@ T4B News Ticker can be installed in two convenient ways: manually or directly fr
 
 == Upgrade Notice ==
 
+= 1.4.2 =
+This update improves ticker initialization in all themes, including block/FSE ones like Twenty Twenty-Four. Please update to ensure proper functionality and reliable animation across different WordPress setups.
+
 = 1.4.1 =
 This update fixes the news ticker not animating in block themes like Twenty Twenty-Four and Twenty Twenty-Five, optimizes script loading, and improves settings validation. Update to ensure reliable ticker display.
 
@@ -94,11 +97,13 @@ This update includes a fix for the "Show in Homepage only" option, ensuring the 
 = 1.3.2 = 
 This version updates the plugin code to align with WordPress coding standards, improving maintainability and compatibility. It also includes a fix for a minor CSS issue. Update now for a cleaner and more robust codebase.
 
-= 1.3.1 =  
-This version includes a small bug fix and ensures compatibility with WordPress 6.6.1. Update now for a smoother experience.
-
 
 == Changelog ==
+
+= 1.4.2 (30 May 2025) =
+* `Improved:` Inline script handling to ensure reliable initialization across all themes.
+* `Fixed:` An issue where the ticker might not initialize if shortcode rendering occurred after script registration.
+* `Enhanced:` Compatibility with WordPress default themes by adjusting script registration and fallback handlers.
 
 = 1.4.1 (25 May 2025) =
 * Fixed news ticker not initializing in block themes like Twenty Twenty-Four and Twenty Twenty-Five, ensuring reliable animation.

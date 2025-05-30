@@ -7,7 +7,7 @@
  * It provides flexibility to control the visibility of notes, plugin info, 
  * and allows for custom CSS class inclusion for styling.
  * 
- * @package T4B News Ticker v1.4.1 - 25 May, 2025
+ * @package T4B News Ticker v1.4.2 - 30 May, 2025
  * @link https://www.realwebcare.com/
  */
 if (!defined('ABSPATH'))
@@ -129,11 +129,11 @@ if (!class_exists('T4BNT_Sidebar')) {
                             '<h3>Plugin Info</h3>
                             <ul class="t4bntusage-list">
                                 <li>T4B News Ticker</li>
-                                <li>Version: 1.4.1</li>
+                                <li>Version: 1.4.2</li>
                                 <li>Scripts: PHP + CSS + JS</li>
                                 <li>Requires: WordPress 5.4+</li>
                                 <li>First release: 29 December, 2014</li>
-                                <li>Last Update: 25 May, 2025</li>
+                                <li>Last Update: 30 May, 2025</li>
                                 <li>By: <a href="%1$s" target="_blank">Realwebcare</a></li>
                                 <li>Facebook Page: <a href="%2$s" target="_blank">Realwebcare</a></li>
                                 <li>Need Help? <a href="%3$s" target="_blank">Support</a></li>

@@ -6,7 +6,7 @@
  * in the admin panel. The help page provides YouTube video instructions, and
  * assistance to administrators on how to use shortcode of the plugin.
  *
- * @package T4B News Ticker v1.4.1 - 25 May, 2025
+ * @package T4B News Ticker v1.4.2 - 30 May, 2025
  * @link https://www.realwebcare.com/
  */
 

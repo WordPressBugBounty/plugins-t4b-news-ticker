@@ -7,7 +7,7 @@
  * text domain setup for translations, adding action links to the plugin settings,
  * and various other essential tasks needed when the plugin is live at the front-end.
  *
- * @package T4B News Ticker v1.4.1 - 25 May, 2025
+ * @package T4B News Ticker v1.4.2 - 30 May, 2025
  * @link https://www.realwebcare.com/
  */
 if ( ! defined( 'ABSPATH' ) ) {
@@ -56,6 +56,9 @@ if( ! class_exists( 'T4BNT_Init' ) ) {
          * @return void
          */
         private function required_files() {
+            // Handles the enqueueing of scripts and styles.
+            require_once T4BNT_PLUGIN_PATH . 'inc/t4bnt-enqueue.php';
+
             // Initializes any additional functions required by the plugin.
             require_once T4BNT_PLUGIN_PATH . 'actions/t4bnt-functions.php';
 
