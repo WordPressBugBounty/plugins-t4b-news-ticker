@@ -1,5 +1,5 @@
 /*!
- *  T4B News Ticker v1.4.2 - 30 May, 2025
+ *  T4B News Ticker v1.4.3 - 16 November, 2025
  *  by @realwebcare - https://www.realwebcare.com/
  */
 
@@ -203,45 +203,45 @@
 
 
 #t4bnt-narration #t4bntusage-note.t4bntusage-maincontent .t4bnt {
-    margin:0 0 10px;
-    line-height:30px
+    margin: 0 0 10px;
+    line-height: 30px
 }
 
 #t4bnt-narration #t4bntusage-note .t4bnt h3 {
-    font-size:20px;
-    font-weight:700;
-    color:#0d0925;
-    margin-top:0;
-    line-height:30px;
-    border-bottom:1px solid #72777c;
-    padding-bottom:7px;
-    text-transform:uppercase
+    font-size: 20px;
+    font-weight: 700;
+    color: #0d0925;
+    margin-top: 0;
+    line-height: 30px;
+    border-bottom: 1px solid #72777c;
+    padding-bottom: 7px;
+    text-transform: uppercase
 }
 
 #t4bnt-narration #t4bntusage-note.t4bntusage-maincontent .t4bnt a {
-    float:none;
-    background:none;
-    margin:0;
-    padding:0;
-    color:#2271b1;
-    font-size:100%;
-    border-radius:0;
-    box-shadow:none;
-    border:0;
-    font-weight:600;
-    text-decoration:none
+    float: none;
+    background: none;
+    margin: 0;
+    padding: 0;
+    color: #2271b1;
+    font-size: 100%;
+    border-radius: 0;
+    box-shadow: none;
+    border: 0;
+    font-weight: 600;
+    text-decoration: none
 }
 
 
 #t4bnt-narration #t4bntusage-note.t4bntusage-maincontent .t4bnt a:hover {
-    color:#135e96;
-    text-decoration:underline
+    color: #135e96;
+    text-decoration: underline
 }
 
 
 #t4bnt-narration #t4bntusage-note.t4bntusage-maincontent .t4bnt ol li {
-    line-height:1.4;
-    color:#262626
+    line-height: 1.4;
+    color: #262626
 }
 
 #t4bnt-narration {
@@ -255,8 +255,8 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-#t4bnt-narration #t4bntusage-note.t4bntusage-maincontent{
-    padding-bottom:20px
+#t4bnt-narration #t4bntusage-note.t4bntusage-maincontent {
+    padding-bottom: 20px
 }
 
 #t4bnt-narration #t4bntusage-note .t4bnt h3 {
@@ -264,36 +264,36 @@
 }
 
 #t4bnt-narration #t4bntusage-note.t4bntusage-maincontent .t4bnt .likeit {
-    position:relative;
-    margin:0 0 50px;
-    font-size:14px;
-    text-transform:uppercase;
-    text-align:justify;
-    color:#2271b1;
-    font-weight:600;
-    line-height:1.5
+    position: relative;
+    margin: 0 0 50px;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: justify;
+    color: #2271b1;
+    font-weight: 600;
+    line-height: 1.5
 }
 
-#t4bnt-narration #t4bntusage-note.t4bntusage-maincontent .t4bnt .likeit a{
-    position:absolute;
-    left:50%;
-    top:calc(100% + 5px);
-    font-size:16px;
-    background-image:linear-gradient(147deg,#fe8a39 0%,#fd3838 74%);
-    margin:10px 0 0;
-    padding:6px 18px;
-    border-radius:50px;
-    color:#fff;
-    text-decoration:none;
-    text-align:center;
-    letter-spacing:4px;
-    transform:translateX(-50%)
+#t4bnt-narration #t4bntusage-note.t4bntusage-maincontent .t4bnt .likeit a {
+    position: absolute;
+    left: 50%;
+    top: calc(100% + 5px);
+    font-size: 16px;
+    background-image: linear-gradient(147deg, #fe8a39 0%, #fd3838 74%);
+    margin: 10px 0 0;
+    padding: 6px 18px;
+    border-radius: 50px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 4px;
+    transform: translateX(-50%)
 }
 
-#t4bnt-narration #t4bntusage-note.t4bntusage-maincontent .t4bnt .likeit a:hover{
-    text-decoration:none;
-    color:#ffe000;
-    background-image:linear-gradient(335deg,#fe8a39 0%,#fd3838 74%)
+#t4bnt-narration #t4bntusage-note.t4bntusage-maincontent .t4bnt .likeit a:hover {
+    text-decoration: none;
+    color: #ffe000;
+    background-image: linear-gradient(335deg, #fe8a39 0%, #fd3838 74%)
 }
 /* // Narration */
 
@@ -476,7 +476,7 @@
 }
 
 #t4bnt-sidebar #t4bntusage-shortcode.t4bntusage-sidebar .t4b-scode pre {
-    margin:10px 0
+    margin: 10px 0
 }
 
 #t4bnt-sidebar .copy-tooltip {
@@ -529,45 +529,45 @@
 }
 
 /* Help */
-.t4bnt_settings_area .wrap.t4bnt_settings .t4bnt-help-info{
-    background-color:#fff;
-    border:1px solid #ddd;
-    border-radius:8px;
-    padding:20px;
-    margin:34px 10px 20px 0;
-    line-height:1.6
+.t4bnt_settings_area .wrap.t4bnt_settings .t4bnt-help-info {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 34px 10px 20px 0;
+    line-height: 1.6
 }
 
 .t4bnt_settings_area .wrap.t4bnt_settings .t4bnt-help-info .get-instructed {
-   font-size:20px;
-   font-weight:bold;
-   margin-bottom:15px;
-   text-transform:uppercase
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase
 }
 
 .t4bnt_settings_area .wrap.t4bnt_settings .t4bnt-help-info .t4bnt-help-instructions {
-   list-style:decimal inside;
-   margin:0;
-   padding:0;
-   color:#333
+    list-style: decimal inside;
+    margin: 0;
+    padding: 0;
+    color: #333
 }
 
 .t4bnt_settings_area .wrap.t4bnt_settings .t4bnt-help-info .t4bnt-help-instructions ul {
-   list-style:disc inside;
-   margin:10px 0 0 20px;
-   padding:0
+    list-style: disc inside;
+    margin: 10px 0 0 20px;
+    padding: 0
 }
 
 .t4bnt_settings_area .wrap.t4bnt_settings .t4bnt-help-info .t4bnt-help-instructions li {
-   margin:10px 0;
-   padding:10px;
-   background-color:#f9f9f9;
-   border:1px solid #eee;
-   border-radius:4px
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 4px
 }
 
 .t4bnt_settings_area .wrap.t4bnt_settings .t4bnt-help-info .t4bnt-help-instructions li pre {
-   display:inline-block
+    display: inline-block
 }
 
 .t4bnt_settings_area .wrap.t4bnt_settings .t4bnt-help-info .t4bnt-help-instructions li code {
@@ -580,105 +580,82 @@
 }
 
 .t4bnt_settings_area .wrap.t4bnt_settings .t4bnt-help-info .t4bnt-help-instructions li strong {
-   color:#0056b3;
-   font-weight:bold
+    color: #0056b3;
+    font-weight: bold
 }
 
 .t4bnt_settings_area .wrap.t4bnt_settings .t4bnt-help-info .getting-started_video {
-   display:flex
+    display: flex
 }
 
 .t4bnt_settings_area .wrap.t4bnt_settings .t4bnt-help-info .getting-started_video img {
-   max-width:100%
+    max-width: 100%
 }
 
 .t4bnt_settings_area .t4bnt-help-info .t4bnt-help-instructions .t4bnt-keyword {
-   color:#B8DC9F
+    color: #B8DC9F
 }
 
 .t4bnt_settings_area .t4bnt-help-info .t4bnt-help-instructions .t4bnt-function {
-   color:#fe8d59
+    color: #fe8d59
 }
 
 .t4bnt_settings_area .t4bnt-help-info .t4bnt-help-instructions .t4bnt-string {
-   color:#00fbbd
+    color: #00fbbd
 }
 /* // Help */
 
 /* Review */
-#t4bnt-review{
-    background:linear-gradient(135deg,#f0f9ff,#cfe7f9);
-    border:2px solid #4a90e2;
-    border-radius:12px;
-    margin:1em auto 0;
-    padding:20px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
-    font-family:"Segoe UI",Tahoma,Geneva,Verdana,sans-serif;
-    color:#333;
-    max-width:90%;
-    animation:fadeIn .6s ease-in-out
+#t4bnt-review {
+    background: #fff;
+    border-radius: 10px;
+    margin: 1em auto 0;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+    max-width: 100%;
+    animation: fadeIn .6s ease-in-out
 }
-    
-@keyframes fadeIn{
-    from{
-        opacity:0;
-        transform:translateY(-10px)
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px)
     }
-    to{
-        opacity:1;
-        transform:translateY(0)
+    to {
+        opacity: 1;
+        transform: translateY(0)
     }
 }
-    
-#t4bnt-review p{
-    font-size:16px;
-    line-height:1.6;
-    margin:10px 0
+
+#t4bnt-review p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 10px 0;
 }
-    
-#t4bnt-review b{
-    color:#0073aa
+
+#t4bnt-review b {
+    color: #0073aa
 }
-    
-.t4bnt-review-btn{
-    display:flex;
-    align-items:flex-start;
-    gap:15px;
-    margin-top:15px
+
+.t4bnt-review-btn {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-top: 15px
 }
-    
-.t4bnt-review-btn .button-primary,.t4bnt-review-btn .button-secondary{
-    transition:background-color .3s ease,transform .2s ease
+
+.t4bnt_settings_area .t4bnt-review-btn .button-primary {
+    padding: 0 10px;
+    font-size: 100%;
 }
-    
-.t4bnt-review-btn .button-primary:hover,.t4bnt-review-btn .button-secondary:hover{
-    transform:scale(1.05)
+
+.t4bnt-review-btn .button-primary, .t4bnt-review-btn .button-secondary {
+    transition: background-color .3s ease, transform .2s ease
 }
-    
-.t4bnt-is-dismissible{
-    position:relative;
-    padding-right:40px
-}
-    
-.t4bnt-notice .t4bnt-close-icon{
-    position:absolute;
-    top:12px;
-    right:12px;
-    width:13px;
-    height:13px;
-    line-height:10px;
-    text-align:center;
-    background:#999;
-    border-radius:50%;
-    font-size:15px;
-    font-weight:900;
-    color:#d3e9f9;
-    cursor:pointer;
-    transition:color .3s ease
-}
-    
-.t4bnt-notice .t4bnt-close-icon:hover{
-    background:#333
+
+.t4bnt-review-btn .button-primary:hover, .t4bnt-review-btn .button-secondary:hover {
+    transform: scale(1.05)
 }
 /* //Review */
 

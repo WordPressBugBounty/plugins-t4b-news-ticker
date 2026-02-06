@@ -7,7 +7,7 @@
  * It provides flexibility to control the visibility of notes, plugin info, 
  * and allows for custom CSS class inclusion for styling.
  * 
- * @package T4B News Ticker v1.4.2 - 30 May, 2025
+ * @package T4B News Ticker v1.4.3 - 16 November, 2025
  * @link https://www.realwebcare.com/
  */
 if (!defined('ABSPATH'))
@@ -109,7 +109,7 @@ if (!class_exists('T4BNT_Sidebar')) {
                                     <li>Google Fonts and Font Awesome Support.</li>
                                     <li>Click <a href="%3$s" target="_blank">here</a> to learn more...</li>
                                 </ul>
-                                <a class="btn-demo" href="%4$s" target="_blank">View Demo</a>
+                                <a class="btn-demo" href="%4$s" target="_blank">Pro Demo</a>
                             </div>',
                             't4b-news-ticker'
                         ),
@@ -129,21 +129,22 @@ if (!class_exists('T4BNT_Sidebar')) {
                             '<h3>Plugin Info</h3>
                             <ul class="t4bntusage-list">
                                 <li>T4B News Ticker</li>
-                                <li>Version: 1.4.2</li>
+                                <li>Version: 1.4.3</li>
                                 <li>Scripts: PHP + CSS + JS</li>
                                 <li>Requires: WordPress 5.4+</li>
                                 <li>First release: 29 December, 2014</li>
-                                <li>Last Update: 30 May, 2025</li>
+                                <li>Last Update: 16 November, 2025</li>
                                 <li>By: <a href="%1$s" target="_blank">Realwebcare</a></li>
                                 <li>Facebook Page: <a href="%2$s" target="_blank">Realwebcare</a></li>
-                                <li>Need Help? <a href="%3$s" target="_blank">Support</a></li>
-                                <li>Like it? Please leave us a <a target="_blank" href="%4$s">★★★★★</a> rating. We highly appreciate your support!</li>
+                                <li>Need Help? <a href="%3$s" target="_blank">Support</a> | <a href="%4$s" target="_blank">Dedicated Support</a></li>
+                                <li>Like it? Please leave us a <a target="_blank" href="%5$s">★★★★★</a> rating. We highly appreciate your support!</li>
                             </ul>',
                             't4b-news-ticker'
                         ),
                         esc_url('https://www.realwebcare.com/'),
                         esc_url('https://www.facebook.com/realwebcare'),
                         esc_url('https://wordpress.org/support/plugin/t4b-news-ticker/'),
+                        esc_url('https://www.realwebcare.com/billing/submitticket.php?step=2&deptid=6'),
                         esc_url('https://wordpress.org/support/plugin/t4b-news-ticker/reviews/?filter=5/#new-post')
                     ) . '</div>';
             }

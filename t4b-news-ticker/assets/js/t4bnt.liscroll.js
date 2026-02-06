@@ -7,7 +7,7 @@
  * http://www.gnu.org/licenses/gpl.html
  *
  * Modified by @realwebcare v1.3.1
- * T4B News Ticker v1.4.2 - 30 May, 2025
+ * T4B News Ticker v1.4.3 - 16 November, 2025
  * by @realwebcare - https://www.realwebcare.com/
  */
 (function($){

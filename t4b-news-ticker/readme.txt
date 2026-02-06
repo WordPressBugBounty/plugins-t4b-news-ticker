@@ -3,7 +3,7 @@ Contributors: realwebcare
 Tags: news ticker, scroll, ticker, breaking news, trending
 Requires at least: 5.2
 Tested up to: 6.8
-Stable Tag: 1.4.2
+Stable Tag: 1.4.3
 Requires PHP: 7.4
 Donate link: https://www.realwebcare.com/billing/store/support/donation
 License: GPLv2 or later
@@ -23,10 +23,10 @@ With **T4B News Ticker**, you can add dynamic news content to your website in an
 https://youtu.be/CX72IvU51SY
 
 ### Flexible Content Sources
-What sets T4B News Ticker apart is its flexibility in content sources. You can display tickers based on specific post categories, relevant tags, or even craft custom text messages with associated links. Simply compose your custom content using the default WordPress post editor.
+What sets T4B News Ticker apart is its flexibility in content sources. You can display tickers based on specific post categories, relevant tags, or even craft custom text messages with associated links. Compose your custom content using the default WordPress post editor.
 
 ### Complete Control Over Appearance
-Take full control over the ticker's appearance and behavior. Adjust the scrolling speed to match your preferences and fine-tune the typography to ensure the ticker seamlessly blends with your website's design. Easily integrate the ticker into your posts, pages, or theme files using the provided shortcode.
+Take complete control over the ticker's appearance and behavior. Adjust the scrolling speed to match your preferences and fine-tune the typography to ensure the ticker seamlessly blends with your website's design. Easily integrate the ticker into your posts, pages, or theme files using the provided shortcode.
 
 <blockquote>
 <h3>Upgrade to Premium</h3>
@@ -79,6 +79,14 @@ T4B News Ticker can be installed in two convenient ways: manually or directly fr
 
 == Upgrade Notice ==
 
+= 1.4.3 =
+This is a routine update to ensure full compatibility with WordPress 6.8.3 and enhance the plugin backend appearance. 
+
+- Added guidance for easily adding the ticker shortcode to all pages.
+- Minor CSS improvements for a more polished backend experience.
+
+No changes affect the frontend functionality. Updating is recommended to benefit from the latest improvements.
+
 = 1.4.2 =
 This update improves ticker initialization in all themes, including block/FSE ones like Twenty Twenty-Four. Please update to ensure proper functionality and reliable animation across different WordPress setups.
 
@@ -94,11 +102,14 @@ Added the option to disable the ticker on tag/category pages, improved the scrip
 = 1.3.3 = 
 This update includes a fix for the "Show in Homepage only" option, ensuring the ticker displays correctly on the homepage. It also resolves an issue where the ticker was not showing on tag and category archive pages. Please update to ensure proper functionality.
 
-= 1.3.2 = 
-This version updates the plugin code to align with WordPress coding standards, improving maintainability and compatibility. It also includes a fix for a minor CSS issue. Update now for a cleaner and more robust codebase.
-
 
 == Changelog ==
+
+= 1.4.3 (16 NOvember 2025) =
+* `Improved:` Backend CSS for a cleaner and more professional look.
+* `Added:` Guidance on how to add the ticker shortcode to all pages.
+* `Tested:` Full compatibility with WordPress 6.8.3.
+* `Routine:` General maintenance and minor enhancements.
 
 = 1.4.2 (30 May 2025) =
 * `Improved:` Inline script handling to ensure reliable initialization across all themes.

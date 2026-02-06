@@ -6,7 +6,7 @@
  * It includes methods for modifying the ticker query, retrieving post categories,
  * and generating JavaScript for ticker effects.
  *
- * @package T4B News Ticker v1.4.2 - 30 May, 2025
+ * @package T4B News Ticker v1.4.3 - 16 November, 2025
  * @link https://www.realwebcare.com/
  */
 if (!defined('ABSPATH')) {

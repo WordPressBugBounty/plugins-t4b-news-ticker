@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: T4B News Ticker\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-23 02:43+0000\n"
+"POT-Creation-Date: 2025-11-16 19:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -16,111 +16,251 @@ msgstr ""
 "X-Loco-Version: 2.6.6; wp-6.4.1\n"
 "X-Domain: t4b-news-ticker"
 
-#: inc/ticker-settings.php:217
-msgid " function:"
+#. %1$s: Opening HTML tag for heading, %2$s: Closing HTML tag for heading, %3$s: Opening paragraph tag, %4$s: Link to the YouTube video, %5$s: Contact Us link, %6$s: Closing paragraph tag, %7$s: Opening paragraph tag for feedback request, %8$s: Link to leave a review
+#: settings/ticker-settings.php:451
+#, php-format
+msgid ""
+"\n"
+"\t\t\t\t\t\t\t\t%1$sWatch Our YouTube Tutorial for Easy Setup!%2$s\n"
+"\t\t\t\t\t\t\t\t%3$sThere is a %4$s available that explains how the User "
+"Front-End plugin works. If you have any trouble understanding, feel free to "
+"%5$s at any time.%6$s\n"
+"\t\t\t\t\t\t\t\t%7$sWe greatly value your feedback! Please spare a moment to "
+"rate your recent experience with our plugin. Your input is highly "
+"appreciated and helps us improve. Thank you for your support!%8$s"
 msgstr ""
 
-#: inc/ticker-settings.php:108
+#: inc/init-t4bnt.php:175
+msgid "! We hope you've had a positive experience so far."
+msgstr ""
+
+#: settings/ticker-settings.php:349
 msgid "0.05"
 msgstr ""
 
-#: inc/ticker-settings.php:120
+#: settings/ticker-settings.php:367
 msgid "0.10"
 msgstr ""
 
-#: inc/ticker-settings.php:159
+#: settings/ticker-settings.php:252
 msgid "10"
 msgstr ""
 
-#: inc/ticker-settings.php:89
+#: settings/ticker-settings.php:329
 msgid "2000"
 msgstr ""
 
-#: inc/ticker-admin.php:22
-msgid "7 impressive animation effects."
+#: settings/ticker-settings.php:290
+msgid "40"
 msgstr ""
 
-#: inc/ticker-settings.php:172
+#. %1s: URL for the Pro version image.
+#. %2s: URL for the T4B News Ticker Pro product page.
+#. %3s: URL for the demo page of T4B News Ticker Pro.
+#: inc/t4bnt-sidebar.php:90
+#, php-format
+msgid ""
+"<div class=\"t4bntusage-feature-header\">\n"
+"                                <img src=\"%1$s\" alt=\"T4BNT Pro\">\n"
+"                            </div>\n"
+"                            <div class=\"t4bntusage-feature-body\">\n"
+"                                <h3>T4B News Ticker Pro Features</h3>\n"
+"                                <div class=\"t4bnt\">Pro version has been "
+"developed to present News Ticker more proficiently. Some of the most notable "
+"features are:</div>\n"
+"                                <a class=\"btn-demo btn-top\" href=\"%2$s\" "
+"target=\"_blank\">Test Drive Pro</a>\n"
+"                                <ul class=\"t4bntusage-list\">\n"
+"                                    <li>Customization Made Effortless.</li>\n"
+"                                    <li>7 impressive animation effects.</li>"
+"\n"
+"                                    <li>Instant Creation with 12 Pre-made "
+"Designs.</li>\n"
+"                                    <li>Continuous Scroll Without "
+"Interruption.</li>\n"
+"                                    <li>Import/Export (Backup) news ticker."
+"</li>\n"
+"                                    <li>Make a copy of a ticker instantly."
+"</li>\n"
+"                                    <li>Choose ticker contents from multiple "
+"categories.</li>\n"
+"                                    <li>RSS Feed and JSON Display.</li>\n"
+"                                    <li>Fix the ticker at the top or bottom "
+"of the page.</li>\n"
+"                                    <li>RTL (Right to Left) Language Support."
+"</li>\n"
+"                                    <li>Google Fonts and Font Awesome "
+"Support.</li>\n"
+"                                    <li>Click <a href=\"%3$s\" "
+"target=\"_blank\">here</a> to learn more...</li>\n"
+"                                </ul>\n"
+"                                <a class=\"btn-demo\" href=\"%4$s\" "
+"target=\"_blank\">Pro Demo</a>\n"
+"                            </div>"
+msgstr ""
+
+#. %1$s: URL for Realwebcare website, %2$s: URL for Realwebcare Facebook page, %3$s: URL for plugin support page, %4$s: URL for plugin review page
+#: inc/t4bnt-sidebar.php:128
+#, php-format
+msgid ""
+"<h3>Plugin Info</h3>\n"
+"                            <ul class=\"t4bntusage-list\">\n"
+"                                <li>T4B News Ticker</li>\n"
+"                                <li>Version: 1.4.3</li>\n"
+"                                <li>Scripts: PHP + CSS + JS</li>\n"
+"                                <li>Requires: WordPress 5.4+</li>\n"
+"                                <li>First release: 29 December, 2014</li>\n"
+"                                <li>Last Update: 16 November, 2025</li>\n"
+"                                <li>By: <a href=\"%1$s\" target=\"_blank\">"
+"Realwebcare</a></li>\n"
+"                                <li>Facebook Page: <a href=\"%2$s\" "
+"target=\"_blank\">Realwebcare</a></li>\n"
+"                                <li>Need Help? <a href=\"%3$s\" "
+"target=\"_blank\">Support</a> | <a href=\"%4$s\" target=\"_blank\">Dedicated "
+"Support</a></li>\n"
+"                                <li>Like it? Please leave us a <a "
+"target=\"_blank\" href=\"%5$s\">★★★★★</a> rating. We highly appreciate your "
+"support!</li>\n"
+"                            </ul>"
+msgstr ""
+
+#: settings/ticker-settings.php:207
+msgid ""
+"<h5>Caution: Deleting Plugin Data on Uninstall</h5><p>Enabling the <strong>"
+"Delete All on Uninstall</strong> option will permanently erase all <strong>"
+"plugin-related settings</strong> and <strong>user metadata</strong> when the "
+"plugin is uninstalled.</p><p>This action is irreversible. Ensure you back up "
+"important data before enabling this option. If you are unsure, we recommend "
+"leaving this option unchecked to preserve your data.</p>"
+msgstr ""
+
+#: inc/t4bnt-sidebar.php:60
+msgid "[/] Shortcode Usage Instruction"
+msgstr ""
+
+#: settings/ticker-settings.php:131
+msgid "Advance Settings"
+msgstr ""
+
+#: inc/init-t4bnt.php:180
+msgid "Already Left a Review"
+msgstr ""
+
+#. 1: Opening strong tag, 2: Closing strong tag
+#: inc/t4bnt-help.php:180
+#, php-format
+msgid ""
+"Alternatively, you can add the shortcode directly in theme files using the "
+"%1$sdo_shortcode%2$s function."
+msgstr ""
+
+#: settings/ticker-settings.php:266
 msgid "Ascending"
 msgstr ""
 
-#: inc/ticker-admin.php:61
-msgid "By"
+#: settings/ticker-settings.php:200
+msgid "Check this box to delete all plugin data upon uninstall."
 msgstr ""
 
-#: inc/ticker-admin.php:27
-msgid "Choose ticker contents from multiple categories."
+#: settings/t4bnt-class.settings-api.php:408
+msgid "Choose File"
 msgstr ""
 
-#: inc/ticker-admin.php:47
+#: inc/t4bnt-sidebar.php:71
 msgid "Click to Copy Shortcode!"
 msgstr ""
 
-#: inc/ticker-settings.php:215
-msgid "Code Usage Instruction in a Theme"
+#: inc/t4bnt-help.php:83
+msgid "Code Usage Instruction in the Theme"
 msgstr ""
 
-#: inc/ticker-admin.php:24
-msgid "Continuous Scroll Without Interruption."
+#: settings/ticker-settings.php:199
+msgid "Delete All on Uninstall:"
 msgstr ""
 
-#: inc/ticker-admin.php:21
-msgid "Customization Made Effortless."
-msgstr ""
-
-#: inc/ticker-settings.php:173
+#: settings/ticker-settings.php:267
 msgid "Descending"
 msgstr ""
 
-#: inc/ticker-settings.php:217
-msgid "do_shortcode"
+#: settings/ticker-settings.php:166
+msgid "Disable on Tag/Category Page"
 msgstr ""
 
-#: inc/ticker-admin.php:41
+#: inc/t4bnt-sidebar.php:65
 msgid "Either create a new post or page, or edit an existing one."
 msgstr ""
 
-#: inc/ticker-settings.php:51
+#: settings/ticker-settings.php:192
+msgid ""
+"Enable this option to hide the notification when the ticker is disabled or "
+"set to display only on the homepage but is not active there."
+msgstr ""
+
+#: settings/ticker-settings.php:150
 msgid "Enable Ticker"
 msgstr ""
 
-#: inc/ticker-settings.php:66
+#: settings/ticker-settings.php:175
 msgid "Enter a title for the News Ticker"
 msgstr ""
 
-#: inc/ticker-settings.php:191
+#: settings/ticker-settings.php:300
 msgid ""
 "Enter custom text for your news ticker. One sentence with or without link "
 "per line."
 msgstr ""
 
-#: inc/ticker-settings.php:65
+#: settings/ticker-settings.php:174
 msgid "Enter Ticker Title"
 msgstr ""
 
-#: inc/ticker-admin.php:59
-msgid "First release: 29 December, 2014"
+#. %s: Example of do_shortcode usage in a PHP code block
+#: inc/t4bnt-help.php:105
+#, php-format
+msgid "Example of shortcode usage in PHP: %s"
 msgstr ""
 
-#: inc/ticker-admin.php:29
-msgid "Fix the ticker at the top or bottom of the page."
+#. %s: Example code for do_shortcode usage
+#: inc/t4bnt-help.php:193
+#, php-format
+msgid "Example: %s"
 msgstr ""
 
-#: inc/ticker-settings.php:35
+#. 1: Opening strong tag, 2: Closing strong tag
+#: inc/t4bnt-help.php:215
+#, php-format
+msgid ""
+"For developers, it is also possible to use hooks like %1$swp_head%2$s or "
+"%1$swp_footer%2$s to add the shortcode programmatically."
+msgstr ""
+
+#: settings/ticker-settings.php:123
 msgid "General Settings"
 msgstr ""
 
-#: inc/ticker-admin.php:64
-msgid "GNU General Public License"
+#. 1: Opening strong tag, 2: Closing strong tag
+#: inc/t4bnt-help.php:154
+#, php-format
+msgid ""
+"Go to %1$sAppearance → Widgets%2$s and add a Text or Custom HTML widget to a "
+"sidebar or footer that appears on all pages."
 msgstr ""
 
-#: inc/ticker-admin.php:40
+#: inc/t4bnt-sidebar.php:64
 msgid ""
 "Go to Posts or Pages, depending on where you want to display the news ticker."
 msgstr ""
 
-#: inc/ticker-admin.php:31
-msgid "Google Fonts and Font Awesome Support."
+#: settings/ticker-settings.php:103
+msgid "Help"
+msgstr ""
+
+#: settings/ticker-settings.php:191
+msgid "Hide Disabled Ticker Notification"
+msgstr ""
+
+#: inc/t4bnt-help.php:142
+msgid "How to Add Ticker Shortcode on All Pages"
 msgstr ""
 
 #. URI of the plugin
@@ -131,223 +271,210 @@ msgstr ""
 msgid "https://www.realwebcare.com/"
 msgstr ""
 
-#: inc/ticker-admin.php:25
-msgid "Import/Export (Backup) news ticker."
+#. 1: Opening strong tag, 2: Closing strong tag
+#: inc/t4bnt-help.php:202
+#, php-format
+msgid ""
+"If using a page builder like %1$sElementor%2$s or %1$sGutenberg%2$s, insert "
+"the Shortcode block or widget into a global template section (e.g., header "
+"or footer)."
 msgstr ""
 
-#: inc/ticker-admin.php:23
-msgid "Instant Creation with 12 Pre-made Designs."
+#: inc/init-t4bnt.php:175
+msgid ""
+"It's been 7 days since your last update or installation of the latest "
+"version of "
 msgstr ""
 
-#: inc/ticker-settings.php:220
+#. 1: Opening strong tag, 2: Closing strong tag
+#: inc/t4bnt-help.php:121
 msgid ""
 "Keep in mind that if you are making changes directly to your theme files, "
 "those changes will be overwritten if you update the theme. To avoid this, "
 "you can create a child theme and make your changes there instead."
 msgstr ""
 
-#: inc/ticker-admin.php:60
-msgid "Last Update: 23 November, 2023"
+#: inc/init-t4bnt.php:178
+msgid "Leave a Review"
 msgstr ""
 
-#: inc/ticker-admin.php:63
-msgid "Like it? Please leave us a"
-msgstr ""
-
-#: inc/ticker-admin.php:43
+#: inc/t4bnt-sidebar.php:67
 msgid ""
 "Locate the spot in the post or page where you want to display the news "
 "ticker."
 msgstr ""
 
-#: inc/ticker-admin.php:26
-msgid "Make a copy of a ticker instantly."
-msgstr ""
-
-#: inc/ticker-settings.php:52
+#: settings/ticker-settings.php:151
 msgid "Mark if you want to show News Ticker."
 msgstr ""
 
-#: inc/ticker-settings.php:100
+#: settings/ticker-settings.php:340
 msgid "Mark if you want to show the News Ticker control buttons."
 msgstr ""
 
-#: inc/ticker-admin.php:62
-msgid "Need Help"
-msgstr ""
-
-#: inc/ticker-settings.php:67
+#: settings/ticker-settings.php:176
 msgid "News Ticker"
 msgstr ""
 
-#: inc/ticker-settings.php:142
+#: settings/ticker-settings.php:233
 msgid "News Ticker Categories"
 msgstr ""
 
-#: inc/ticker-settings.php:190
+#: settings/ticker-settings.php:299
 msgid "News Ticker Custom Text"
 msgstr ""
 
-#: inc/ticker-settings.php:130
-msgid "News Ticker Type"
+#: settings/ticker-settings.php:278
+msgid "No Order"
 msgstr ""
 
-#: inc/ticker-settings.php:157
-msgid "Number of post"
+#: settings/ticker-settings.php:250
+msgid "Number of Post"
 msgstr ""
 
-#: inc/ticker-settings.php:158
+#: settings/ticker-settings.php:251
 msgid "Number of post to show. Default -1, means show all."
 msgstr ""
 
-#: inc/ticker-admin.php:51
+#: inc/t4bnt-sidebar.php:75
 msgid ""
 "Once you've saved or published the post or page, the news ticker shortcode "
 "will be processed and the news ticker will be displayed on the front end of "
 "your site."
 msgstr ""
 
-#: inc/ticker-settings.php:197
+#: settings/ticker-settings.php:183
 msgid "Open in New Tab"
 msgstr ""
 
-#: inc/ticker-admin.php:45
+#: inc/t4bnt-sidebar.php:69
 msgid "Paste the following shortcode into the editor:"
 msgstr ""
 
-#: inc/ticker-admin.php:54
-msgid "Plugin Info"
+#. 1: Opening strong tag, 2: Closing strong tag
+#: inc/t4bnt-help.php:167
+#, php-format
+msgid ""
+"Paste your ticker shortcode (e.g., %1$s[t4b-ticker]%2$s) inside the widget "
+"to display it site-wide."
 msgstr ""
 
-#: inc/ticker-admin.php:37
-msgid "Plugin Shortcode"
-msgstr ""
-
-#: inc/ticker-settings.php:185
+#: settings/ticker-settings.php:281
 msgid "Post Date"
 msgstr ""
 
-#: inc/ticker-settings.php:183
+#: settings/ticker-settings.php:279
 msgid "Post ID"
 msgstr ""
 
-#: inc/ticker-settings.php:184
+#: settings/ticker-settings.php:280
 msgid "Post Name (post slug)"
 msgstr ""
 
-#: inc/ticker-admin.php:18
-msgid "Premium Features"
+#: settings/ticker-settings.php:288
+msgid "Post Title Max. Length"
 msgstr ""
 
-#: inc/ticker-admin.php:19
-msgid ""
-"Premium version has been developed to present News Ticker more proficiently. "
-"Some of the most notable features are:"
-msgstr ""
-
-#: inc/ticker-admin.php:64
-msgid "Published under"
-msgstr ""
-
-#: inc/ticker-admin.php:63
-msgid "rating. We highly appreciate your support!"
+#: settings/ticker-settings.php:282
+msgid "Random"
 msgstr ""
 
 #. Author of the plugin
-#: inc/ticker-admin.php:61
 msgid "Realwebcare"
 msgstr ""
 
-#: inc/ticker-admin.php:58
-msgid "Requires: Wordpress 5.4+"
-msgstr ""
-
-#: inc/ticker-settings.php:119
+#: settings/ticker-settings.php:366
 msgid "Revealing speed of the ticker."
 msgstr ""
 
-#: inc/ticker-admin.php:28
-msgid "RSS Feed and JSON Display."
-msgstr ""
-
-#: inc/ticker-admin.php:30
-msgid "RTL (Right to Left) Language Support."
-msgstr ""
-
-#: inc/ticker-admin.php:49
+#: inc/t4bnt-sidebar.php:73
 msgid "Save or publish the post or page."
 msgstr ""
 
-#: inc/ticker-admin.php:57
-msgid "Scripts: PHP + CSS + JS"
-msgstr ""
-
-#: inc/ticker-settings.php:99
+#: settings/ticker-settings.php:339
 msgid "Scrolling Control"
 msgstr ""
 
-#: inc/ticker-settings.php:107
+#: settings/ticker-settings.php:348
 msgid "Scrolling speed of the ticker."
 msgstr ""
 
-#: inc/ticker-settings.php:143
+#: settings/ticker-settings.php:234
 msgid "Select a category for News Ticker to show."
 msgstr ""
 
-#: inc/ticker-settings.php:198
+#: settings/ticker-settings.php:167
+msgid "Select if you want to hide the ticker on tags and category archive page"
+msgstr ""
+
+#: settings/ticker-settings.php:184
 msgid "Select if you want to open link in new tab."
 msgstr ""
 
-#: inc/ticker-settings.php:59
+#: settings/ticker-settings.php:159
 msgid "Select if you want to show the News Ticker only in homepage."
 msgstr ""
 
-#: inc/ticker-settings.php:150
+#: settings/ticker-settings.php:242
 msgid "Select News Ticker Tags"
 msgstr ""
 
-#: inc/ticker-settings.php:167
+#: settings/ticker-settings.php:261
 msgid "Select Post Order"
 msgstr ""
 
-#: inc/ticker-settings.php:178
+#: settings/ticker-settings.php:273
 msgid "Select Post Order By"
 msgstr ""
 
-#: inc/ticker-settings.php:151
+#: settings/ticker-settings.php:243
 msgid "Select tag names seprated by comma."
 msgstr ""
 
-#: inc/ticker-settings.php:75
+#: settings/ticker-settings.php:314
 msgid "Select type of animation (Default: 'scroll')."
 msgstr ""
 
-#: news-ticker.php:53
+#: settings/ticker-settings.php:289
+msgid "Set the maximum length of the post title. Use -1/0 for no limit."
+msgstr ""
+
+#: inc/init-t4bnt.php:104
 msgid "Settings"
 msgstr ""
 
-#: inc/ticker-settings.php:58
+#: settings/ticker-settings.php:158
 msgid "Show in Homepage Only"
 msgstr ""
 
-#: inc/ticker-settings.php:106
+#: settings/ticker-settings.php:220
+msgid "Show News Ticker By"
+msgstr ""
+
+#: settings/ticker-settings.php:347
 msgid "Speed of Scrolling"
 msgstr ""
 
-#: inc/ticker-settings.php:118
+#: settings/ticker-settings.php:365
 msgid "Speed of Ticker"
 msgstr ""
 
-#: inc/ticker-admin.php:62
+#: inc/init-t4bnt.php:105
 msgid "Support"
 msgstr ""
 
-#: inc/ticker-admin.php:42
+#: inc/t4bnt-sidebar.php:66
 msgid "Switch to the visual editor if it's not already active."
 msgstr ""
 
 #. Name of the plugin
+#: inc/init-t4bnt.php:158 settings/ticker-settings.php:80
+#: settings/ticker-settings.php:93
 msgid "T4B News Ticker"
+msgstr ""
+
+#: inc/t4bnt-help.php:28 settings/ticker-settings.php:102
+msgid "T4B News Ticker Guide"
 msgstr ""
 
 #. Description of the plugin
@@ -356,45 +483,95 @@ msgid ""
 "you to make horizontal News Ticker."
 msgstr ""
 
-#: inc/ticker-settings.php:74
+#: settings/ticker-settings.php:92 settings/ticker-settings.php:403
+msgid "T4B News Ticker Options"
+msgstr ""
+
+#: settings/ticker-settings.php:81
+msgid "T4B Ticker"
+msgstr ""
+
+#: settings/ticker-settings.php:313
 msgid "Ticker Animation Type"
 msgstr ""
 
-#: inc/ticker-settings.php:27
-msgid "Ticker Settings"
+#: settings/ticker-settings.php:127
+msgid "Ticker Contents"
 msgstr ""
 
-#: inc/ticker-settings.php:88
-msgid "Time between the fades in milliseconds (Default: '2000')"
+#: actions/ticker-shortcode.php:235
+msgid "Ticker news is disabled on the homepage."
 msgstr ""
 
-#: inc/ticker-settings.php:87
+#: actions/ticker-shortcode.php:226
+msgid "Ticker news is disabled."
+msgstr ""
+
+#: actions/ticker-shortcode.php:230
+msgid "Ticker news is only displayed on the front page."
+msgstr ""
+
+#: settings/ticker-settings.php:328
+msgid ""
+"Time between the fades in milliseconds (Default: '2000', means 2 seconds)"
+msgstr ""
+
+#: settings/ticker-settings.php:327
 msgid "Timeout"
 msgstr ""
 
-#: inc/ticker-admin.php:38
+#: inc/t4bnt-sidebar.php:62
 msgid ""
 "To display a news ticker shortcode in a WordPress post or page, you need to "
 "access the post or page editor in the WordPress dashboard. Here's how:"
 msgstr ""
 
-#: inc/ticker-settings.php:217
+#. 1: Opening strong tag, 2: Closing strong tag
+#: inc/t4bnt-help.php:95
+#, php-format
 msgid ""
 "To display a news ticker shortcode in a WordPress theme file, you can use "
-"the "
+"the %1$sdo_shortcode%2$s function:"
 msgstr ""
 
-#: inc/ticker-admin.php:56
-msgid "Version: 1.2.9"
+#. 1: Opening strong tag, 2: Closing strong tag
+#: inc/t4bnt-help.php:60
+#, php-format
+msgid ""
+"To help you get started with the T4B News Ticker plugin, we've prepared a "
+"detailed tutorial video. This video is %1$s5 minutes and 42 seconds%2$s long "
+"and covers everything you need to know about how the plugin works, including "
+"setup, configuration, and advanced features."
 msgstr ""
 
-#: inc/ticker-admin.php:33
-msgid "View Demo"
+#: actions/ticker-shortcode.php:170
+msgid "Untitled"
 msgstr ""
 
-#: inc/ticker-settings.php:219
+#: inc/t4bnt-help.php:49
+msgid "Watch the Tutorial Video:"
+msgstr ""
+
+#: inc/t4bnt-help.php:65
+msgid ""
+"We highly recommend watching this video to make the most out of the T4B News "
+"Ticker plugin. If you have any questions after watching, feel free to reach "
+"out to our support team."
+msgstr ""
+
+#: inc/t4bnt-help.php:113
 msgid ""
 "You can place this code anywhere in your theme file where you want the news "
 "ticker to appear. For example, you could place it in the template file for a "
 "specific page of your site."
+msgstr ""
+
+#: settings/ticker-settings.php:428
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: inc/init-t4bnt.php:176
+msgid ""
+"Your feedback is important to us and can help us improve. If you enjoy our "
+"plugin, please leave a quick review!"
 msgstr ""
