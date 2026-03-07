@@ -7,7 +7,7 @@
  * and renders the news ticker based on the provided settings. The class also ensures proper 
  * sanitization and validation of all inputs and options to maintain security and data integrity.
  *
- * @package T4B News Ticker v1.4.3 - 16 November, 2025
+ * @package T4B News Ticker v1.4.4 - 7 March, 2026
  * @link https://www.realwebcare.com/
  */
 if (!defined('ABSPATH'))

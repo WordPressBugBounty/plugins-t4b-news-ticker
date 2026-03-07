@@ -7,7 +7,7 @@
  * Methods:
  * - t4bnt_enqueue_script(): Enqueues the necessary CSS and JS files for the front-end.
  *
- * @package T4B News Ticker v1.4.3 - 16 November, 2025
+ * @package T4B News Ticker v1.4.4 - 7 March, 2026
  * @link https://www.realwebcare.com/
  */
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly

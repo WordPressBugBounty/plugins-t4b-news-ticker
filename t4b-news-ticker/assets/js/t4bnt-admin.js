@@ -6,57 +6,57 @@
  * Uses localStorage to remember the active tab, so the plugin interface maintains 
  * the user's last tab state even after a page reload or revisit.
  *
- * T4B News Ticker v1.4.3 - 16 November, 2025
+ * T4B News Ticker v1.4.4 - 7 March, 2026
  * by @realwebcare - https://www.realwebcare.com/
  */
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
 	"use strict";
 
 	// Switches option sections
 	$('.group').hide();
-	var activetab = '';
-	if (typeof(localStorage) != 'undefined' ) {
-		activetab = localStorage.getItem("activetab");
+	var t4bnt_activetab = '';
+	if (typeof (localStorage) != 'undefined') {
+		t4bnt_activetab = localStorage.getItem("t4bnt_activetab");
 	}
 	//if url has section id as hash then set it as active or override the current local storage value
-	if(window.location.hash){
-		activetab = window.location.hash;
-		if (typeof(localStorage) != 'undefined' ) {
-			localStorage.setItem("activetab", activetab);
+	if (window.location.hash) {
+		t4bnt_activetab = window.location.hash;
+		if (typeof (localStorage) != 'undefined') {
+			localStorage.setItem("t4bnt_activetab", t4bnt_activetab);
 		}
 	}
-	if (activetab != '' && $(activetab).length ) {
-		$(activetab).fadeIn();
+	if (t4bnt_activetab != '' && $(t4bnt_activetab).length) {
+		$(t4bnt_activetab).fadeIn();
 	} else {
 		$('.group:first').fadeIn();
 	}
-	$('.group .collapsed').each(function(){
+	$('.group .collapsed').each(function () {
 		$(this).find('input:checked').parent().parent().parent().nextAll().each(
-		function(){
-			if ($(this).hasClass('last')) {
-				$(this).removeClass('hidden');
-				return false;
-			}
-			$(this).filter('.hidden').removeClass('hidden');
-		});
+			function () {
+				if ($(this).hasClass('last')) {
+					$(this).removeClass('hidden');
+					return false;
+				}
+				$(this).filter('.hidden').removeClass('hidden');
+			});
 	});
-	if (activetab != '' && $(activetab + '-tab').length ) {
-		$(activetab + '-tab').addClass('nav-tab-active');
+	if (t4bnt_activetab != '' && $(t4bnt_activetab + '-tab').length) {
+		$(t4bnt_activetab + '-tab').addClass('nav-tab-active');
 	}
 	else {
 		$('.nav-tab-wrapper a:first').addClass('nav-tab-active');
 	}
-    $('.t4bnt-notice .t4bnt-close-icon').on('click', function (e) {
-        $(this).closest('.t4bnt-notice').fadeOut(300, function () {
-            $(this).remove();
-        });
-    });
-	$('.nav-tab-wrapper a').click(function(evt) {
+	$('.t4bnt-notice .t4bnt-close-icon').on('click', function (e) {
+		$(this).closest('.t4bnt-notice').fadeOut(300, function () {
+			$(this).remove();
+		});
+	});
+	$('.nav-tab-wrapper a').click(function (evt) {
 		$('.nav-tab-wrapper a').removeClass('nav-tab-active');
 		$(this).addClass('nav-tab-active').blur();
 		var clicked_group = $(this).attr('href');
-		if (typeof(localStorage) != 'undefined' ) {
-			localStorage.setItem("activetab", $(this).attr('href'));
+		if (typeof (localStorage) != 'undefined') {
+			localStorage.setItem("t4bnt_activetab", $(this).attr('href'));
 		}
 		$('.group').hide();
 		$(clicked_group).fadeIn();
@@ -89,7 +89,7 @@ jQuery(document).ready(function($) {
 	if (selected_effect === 'scroll') {$('.scroll_control, .scroll_speed').show();}
 	if (selected_effect === 'ticker') {$('.reveal_speed, .ticker_fadetime').show();}
 
-	$("select").change(function(){
+	$("select").change(function () {
 		var selected_effect = $("select[id='t4bnt_advance[ticker_effect]'] option:selected").val();
 
 		if (selected_effect === 'slide' || selected_effect === 'fade') {
@@ -120,7 +120,7 @@ jQuery(document).ready(function($) {
 		$('.ticker_custom').show();
 	}
 
-	$(".ticker_type input[type='radio']").change(function() {
+	$(".ticker_type input[type='radio']").change(function () {
 		var selected_tickerType = $("input[type='radio']:checked").val();
 
 		if (selected_tickerType === 'category') {
@@ -137,31 +137,31 @@ jQuery(document).ready(function($) {
 		}
 	});
 
-    $(".copy-tooltip").click(function() {
-        var shortcode = "[t4b-ticker]"; // Define the shortcode to copy
+	$(".copy-tooltip").click(function () {
+		var shortcode = "[t4b-ticker]"; // Define the shortcode to copy
 
-        // Create a temporary input element
-        var tempInput = $("<input>");
-        $("body").append(tempInput);
-        tempInput.val(shortcode).select();
-        document.execCommand("copy");
-        tempInput.remove();
+		// Create a temporary input element
+		var tempInput = $("<input>");
+		$("body").append(tempInput);
+		tempInput.val(shortcode).select();
+		document.execCommand("copy");
+		tempInput.remove();
 
-        // Update tooltip text
-        $("#t4bntTooltip").text("Copied!");
+		// Update tooltip text
+		$("#t4bntTooltip").text("Copied!");
 
-        // Reset tooltip text after 2 seconds
-        setTimeout(function() {
-            $("#t4bntTooltip").text("Click to Copy Shortcode!");
-        }, 2000);
-    });
+		// Reset tooltip text after 2 seconds
+		setTimeout(function () {
+			$("#t4bntTooltip").text("Click to Copy Shortcode!");
+		}, 2000);
+	});
 });
 
 function toggleVisibility(id) {
 	"use strict";
 	var e = document.getElementById(id);
 
-	if(e.style.display === 'block') {
+	if (e.style.display === 'block') {
 		e.style.display = 'none';
 	} else {
 		e.style.display = 'block';

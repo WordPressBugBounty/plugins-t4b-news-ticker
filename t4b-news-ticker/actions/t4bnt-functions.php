@@ -6,7 +6,7 @@
  * It includes methods for modifying the ticker query, retrieving post categories,
  * and generating JavaScript for ticker effects.
  *
- * @package T4B News Ticker v1.4.3 - 16 November, 2025
+ * @package T4B News Ticker v1.4.4 - 7 March, 2026
  * @link https://www.realwebcare.com/
  */
 if (!defined('ABSPATH')) {
@@ -103,12 +103,15 @@ if (!class_exists('T4BNT_Functions')) {
         function t4bnt_scroll_ticker_script($settings = array())
         {
             $script = 'jQuery(function($) {';
-            $script .= '$("#ticker").liScroll({';
+            $script .= 'var $t = $("#ticker");';
+            $script .= 'if ($t.length && !$t.hasClass("t4bnt-initialized")) {';
+            $script .= '$t.addClass("t4bnt-initialized").liScroll({';
             $script .= 'travelocity: ' . esc_js($settings['speed']) . ',';
             if (isset($settings['control']) && $settings['control'] == 'on') {
                 $script .= 'showControls: true';
             }
             $script .= '});';
+            $script .= '}';
             $script .= '});';
 
             // error_log('T4BNT: Scroll ticker script generated: ' . $script);
@@ -128,12 +131,15 @@ if (!class_exists('T4BNT_Functions')) {
         function t4bnt_non_scroll_switch($settings = array())
         {
             $script = 'jQuery(function($) {';
-            $script .= '$("#ticker").ticker({';
+            $script .= 'var $t = $("#ticker");';
+            $script .= 'if ($t.length && !$t.hasClass("t4bnt-initialized")) {';
+            $script .= '$t.addClass("t4bnt-initialized").ticker({';
             $script .= 'speed: ' . esc_js($settings['speed']) . ',';
             $script .= 'titleText: "' . esc_js($settings['title']) . '",';
             $script .= 'displayType: "' . esc_js($settings['effect']) . '",';
             $script .= 'pauseOnItems: ' . esc_js($settings['timeout']) . ',';
             $script .= '});';
+            $script .= '}';
             $script .= '});';
 
             // error_log('T4BNT: Non-scroll ticker script generated: ' . $script);

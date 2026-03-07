@@ -7,7 +7,7 @@
  * text domain setup for translations, adding action links to the plugin settings,
  * and various other essential tasks needed when the plugin is live at the front-end.
  *
- * @package T4B News Ticker v1.4.3 - 16 November, 2025
+ * @package T4B News Ticker v1.4.4 - 7 March, 2026
  * @link https://www.realwebcare.com/
  */
 if (!defined('ABSPATH')) {

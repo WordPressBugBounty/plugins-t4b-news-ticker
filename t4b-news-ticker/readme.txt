@@ -2,8 +2,8 @@
 Contributors: realwebcare
 Tags: news ticker, scroll, ticker, breaking news, trending
 Requires at least: 5.2
-Tested up to: 6.8
-Stable Tag: 1.4.3
+Tested up to: 6.9
+Stable Tag: 1.4.4
 Requires PHP: 7.4
 Donate link: https://www.realwebcare.com/billing/store/support/donation
 License: GPLv2 or later
@@ -79,6 +79,9 @@ T4B News Ticker can be installed in two convenient ways: manually or directly fr
 
 == Upgrade Notice ==
 
+= 1.4.4 =
+* Fixed an issue where the settings page tabs/links were broken due to localized script conflicts.
+
 = 1.4.3 =
 This is a routine update to ensure full compatibility with WordPress 6.8.3 and enhance the plugin backend appearance. 
 
@@ -104,6 +107,10 @@ This update includes a fix for the "Show in Homepage only" option, ensuring the 
 
 
 == Changelog ==
+
+= 1.4.4 (07 March 2026) =
+* `Fixed:` Resolved an issue where settings admin links did not work due to JavaScript localStorage key conflict with other plugins like Elementor or Astra.
+* `Fixed:` A minor JS issue.
 
 = 1.4.3 (16 NOvember 2025) =
 * `Improved:` Backend CSS for a cleaner and more professional look.

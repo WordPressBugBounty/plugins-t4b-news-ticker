@@ -1,56 +1,56 @@
 /**
- * T4B News Ticker v1.4.3 - 16 November, 2025
+ * T4B News Ticker v1.4.4 - 7 March, 2026
  * by @realwebcare - https://www.realwebcare.com/
  */
 .ticker-news {
-    background: #fff;
-    height: 40px;
-    overflow: hidden;
-    position: relative;
-    border: 1px solid #ddd;
-    border-radius: 0;
-    margin: 0;
-    padding: 0;
-    line-height: 20px;
+	background: #fff;
+	height: 40px;
+	overflow: hidden;
+	position: relative;
+	border: 1px solid #ddd;
+	border-radius: 0;
+	margin: 0;
+	padding: 0;
+	line-height: 20px;
 }
 .ticker-news span {
-    background: #dd3737;
-    height: 40px;
-    float: left;
-    padding: 0 12px;
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 700;
+	background: #dd3737;
+	height: 40px;
+	float: left;
+	padding: 0 12px;
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: 700;
 	text-transform: uppercase;
-    line-height: 40px;
+	line-height: 40px;
 }
-.ticker-news ul{
+.ticker-news ul {
 	list-style: none;
-    list-style-image: none;
-	float:left;
+	list-style-image: none;
+	float: left;
 	margin: 0;
 	padding: 0;
 	font-size: 14px;
 }
 .ticker-news ul li {
 	height: 40px;
-    line-height: 38px;
+	line-height: 38px;
 	list-style-type: none;
 	font-size: 14px;
 	margin-left: 10px;
 }
 .ticker-news ul a {
-    padding: 0;
-    display: inline-block;
-    white-space: nowrap;
-    color: #696969;
-    font-size: 14px;
+	padding: 0;
+	display: inline-block;
+	white-space: nowrap;
+	color: #696969;
+	font-size: 14px;
 }
 .ticker-news ul a:hover {
-    color: #0199BC;
+	color: #0199BC;
 }
 .ticker-news p {
-    margin: 0 !important;
+	margin: 0 !important;
 }
 
 /*
@@ -61,7 +61,7 @@
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-    background: #fff;
+	background: #fff;
 	position: relative;
 }
 .ticker-news .tickercontainer .ticker-mask {
@@ -94,22 +94,22 @@
 	padding: 0;
 	color: #696969;
 	margin: 0;
-	font-size:14px;
+	font-size: 14px;
 	font-weight: 600;
-    text-decoration: none;
+	text-decoration: none;
 }
 .ticker-news .tickercontainer ul.newsticker span {
 	margin: 0 10px 0 0;
 }
 .ticker-news .tickercontainer .t4bScroll-controls {
-    background: #ffffff;
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0;
-    padding: 0;
-    width: 82px;
-    height: 38px;
+	background: #ffffff;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	width: 82px;
+	height: 38px;
 }
 .tickercontainer .t4bScroll-prev,
 .tickercontainer .t4bScroll-role,
@@ -117,11 +117,11 @@
 	background: url(../images/sprites.gif) no-repeat 1px 2px;
 	cursor: pointer;
 	height: 25px;
-	position: absolute;        
+	position: absolute;
 	text-align: left;
 	text-indent: -9999px;
 	top: 50%;
-    transform: translateY(-50%);
+	transform: translateY(-50%);
 }
 .tickercontainer .t4bScroll-prev {
 	right: 55px;
