@@ -7,7 +7,7 @@
  * text domain setup for translations, adding action links to the plugin settings,
  * and various other essential tasks needed when the plugin is live at the front-end.
  *
- * @package T4B News Ticker v1.4.4 - 7 March, 2026
+ * @package T4B News Ticker v1.4.5 - 9 May, 2026
  * @link https://www.realwebcare.com/
  */
 if (!defined('ABSPATH')) {
@@ -172,12 +172,12 @@ if (!class_exists('T4BNT_Init')) {
                             <a href="%5$s" class="t4bnt-grid-review-done button button-secondary">%6$s</a>
                         </div>
                     </div>',
-                    esc_html__( 'It\'s been 7 days since your last update or installation of the latest version of ', 't4b-news-ticker' ) . '<b>' . esc_html( $plugin_name ) . '</b>' . esc_html__( '! We hope you\'ve had a positive experience so far.', 't4b-news-ticker' ),
-                    esc_html__( 'Your feedback is important to us and can help us improve. If you enjoy our plugin, please leave a quick review!', 't4b-news-ticker' ),
-                    esc_url( $review_url ),
-                    esc_html__( 'Leave a Review', 't4b-news-ticker' ),
-                    esc_url( $dont_disturb ),
-                    esc_html__( 'Already Left a Review', 't4b-news-ticker' )
+                    esc_html__('It\'s been 7 days since your last update or installation of the latest version of ', 't4b-news-ticker') . '<b>' . esc_html($plugin_name) . '</b>' . esc_html__('! We hope you\'ve had a positive experience so far.', 't4b-news-ticker'),
+                    esc_html__('Your feedback is important to us and can help us improve. If you enjoy our plugin, please leave a quick review!', 't4b-news-ticker'),
+                    esc_url($review_url),
+                    esc_html__('Leave a Review', 't4b-news-ticker'),
+                    esc_url($dont_disturb),
+                    esc_html__('Already Left a Review', 't4b-news-ticker')
                 );
             }
         }

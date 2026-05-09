@@ -3,7 +3,7 @@
  * Plugin Name:       T4B News Ticker
  * Plugin URI:        http://wordpress.org/plugins/t4b-news-ticker/
  * Description:       T4B News Ticker is a flexible and easy to use WordPress plugin that allow you to make horizontal News Ticker.
- * Version:           1.4.4
+ * Version:           1.4.5
  * Requires at least: 5.2
  * Requires PHP:      7.4
  * Author:            Realwebcare
@@ -24,8 +24,6 @@ if ( ! class_exists('T4BNT_Index') ) {
         private static $instance;
 
         private function __construct() {
-            add_action( 'plugins_loaded', array( $this, 't4bnt_check_version' ) );
-
             // Define plugin-specific constants.
             $this->define_constants();
 
@@ -41,58 +39,6 @@ if ( ! class_exists('T4BNT_Index') ) {
             self::$instance = new self();
 
             return self::$instance;
-        }
-
-        /**
-         * Checks and updates plugin options if the installed version is lower than the required version.
-         *
-         * This function runs when the plugin is loaded. If the stored plugin version is older than
-         * the specified version (1.4.0), it migrates existing options to the new format and updates
-         * the version in the database to prevent re-running the migration in future updates.
-         *
-         * @return void
-         */
-        public function t4bnt_check_version() {
-            $current_version = '1.4.4'; // Set to the version that requires updates
-            $saved_version = get_option( 't4bnt_plugin_version', '' ); // Handle missing option
-        
-            // Run only for users below 1.4.0
-            if ( empty($saved_version) || version_compare($saved_version, '1.4.4', '<') ) {
-                // Perform required option updates (only needed once)
-                $old_version_options = get_option( 't4bnt_general' );
-
-                $t4bnt_general = array(
-                    'ticker_news' => '', 'ticker_home' => '', 'ticker_taxon' => '', 'ticker_title' => '', 'ticker_ntab' => '', 'hide_notice' => '',
-                );
-
-                $t4bnt_content = array(
-                    'ticker_type' => '', 'ticker_cat' => '', 'ticker_tag' => '', 'ticker_postno' => '', 'ticker_order' => '', 'ticker_order_by' => '', 'ticker_custom' => '',
-                );
-
-                $t4bnt_advance = array(
-                    'ticker_effect' => '', 'ticker_fadetime' => '', 'scroll_control' => '', 'scroll_speed' => '', 'reveal_speed' => '',
-                );
-
-                if ( is_array( $old_version_options ) ) {
-                    foreach ( $old_version_options as $key => $value ) :
-                        if ( array_key_exists( $key, $t4bnt_general ) ) {
-                            $t4bnt_general[$key] = $value;
-                        } elseif ( array_key_exists( $key, $t4bnt_content ) ) {
-                            $t4bnt_content[$key] = $value;
-                        } else {
-                            $t4bnt_advance[$key] = $value;
-                        }
-                    endforeach;
-                }
-
-                // Save the old options in the new version way
-                update_option( 't4bnt_general', $t4bnt_general );
-                update_option( 't4bnt_content', $t4bnt_content );
-                update_option( 't4bnt_advance', $t4bnt_advance );
-        
-                // Save the new version to prevent running this again
-                update_option('t4bnt_plugin_version', $current_version);
-            }
         }
 
         /**

@@ -11,7 +11,7 @@
 	You should have received a copy of the GNU General Public License
 	along with jQuery News Ticker.  If not, see <http://www.gnu.org/licenses/>.
 
-	T4B News Ticker v1.4.4 - 7 March, 2026
+	T4B News Ticker v1.4.5 - 9 May, 2026
 	by @realwebcare - https://www.realwebcare.com/
 */
 (function ($) {

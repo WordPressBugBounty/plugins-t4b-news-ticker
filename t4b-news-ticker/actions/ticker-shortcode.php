@@ -7,7 +7,7 @@
  * and renders the news ticker based on the provided settings. The class also ensures proper 
  * sanitization and validation of all inputs and options to maintain security and data integrity.
  *
- * @package T4B News Ticker v1.4.4 - 7 March, 2026
+ * @package T4B News Ticker v1.4.5 - 9 May, 2026
  * @link https://www.realwebcare.com/
  */
 if (!defined('ABSPATH'))
@@ -210,7 +210,7 @@ if (!class_exists('T4BNT_Shortcode')) {
 				if (wp_script_is('t4bnt-script', 'enqueued')) {
 					wp_add_inline_script('t4bnt-script', $script);
 				} else {
-					wp_register_script('t4bnt-init', false, [], '1.4.2', ['in_footer' => true]);
+					wp_register_script('t4bnt-init', false, [], '1.4.5', ['in_footer' => true]);
 					wp_enqueue_script('t4bnt-init');
 					wp_add_inline_script('t4bnt-init', $script);
 				}

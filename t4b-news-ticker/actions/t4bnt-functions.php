@@ -6,7 +6,7 @@
  * It includes methods for modifying the ticker query, retrieving post categories,
  * and generating JavaScript for ticker effects.
  *
- * @package T4B News Ticker v1.4.4 - 7 March, 2026
+ * @package T4B News Ticker v1.4.5 - 9 May, 2026
  * @link https://www.realwebcare.com/
  */
 if (!defined('ABSPATH')) {
@@ -68,12 +68,9 @@ if (!class_exists('T4BNT_Functions')) {
         /**
          * Retrieves and displays the post categories.
          *
-         * This method fetches the categories of posts based on specific order criteria.
-         * It can be used to display a checklist of categories in the ticker settings.
+         * This method fetches the categories of posts for the ticker settings.
          *
-         * @param string $orderby The parameter to order categories by (defaults to 'name').
-         * @param string $order The direction of the ordering, either 'asc' or 'desc'. Defaults to 'desc'.
-         * @return array The list of categories based on the specified parameters.
+         * @return array The list of categories.
          */
         public function t4bnt_render_category_checklist()
         {

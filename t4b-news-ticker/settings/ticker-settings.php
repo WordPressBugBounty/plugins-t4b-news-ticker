@@ -6,7 +6,7 @@
  * It utilizes the Settings API to create and manage settings sections, fields, and pages.
  * It also includes functionality for displaying a help page, adding menu items, and retrieving pages.
  * 
- * @package T4B News Ticker v1.4.4 - 7 March, 2026
+ * @package T4B News Ticker v1.4.5 - 9 May, 2026
  * @link https://www.realwebcare.com/
  */
 if (!defined('ABSPATH'))
@@ -104,6 +104,16 @@ if (!class_exists('T4BNT_Settings_Config')):
 				'administrator',
 				't4bnt-help',
 				array($this, 't4bnt_help_page')
+			);
+
+			// Plugin Page
+			add_submenu_page(
+				't4bnt-settings',
+				__('RWC Plugins', 't4b-news-ticker'),
+				__('<span style="color:#E49024">Plugins</span>', 't4b-news-ticker'),
+				'manage_options',
+				't4bnt-plugins',
+				array($this, 't4bnt_plugins_page')
 			);
 		}
 
@@ -430,6 +440,15 @@ if (!class_exists('T4BNT_Settings_Config')):
 
 			$t4bnt_help = new T4BNT_Help();
 			$t4bnt_help->render_t4bnt_help_page();
+		}
+
+		/* Including Plugins File */
+		public function t4bnt_plugins_page()
+		{
+			if (!current_user_can('manage_options')) {
+				wp_die(__('You do not have sufficient permissions to access this page.', 't4b-news-ticker'));
+			}
+			require_once T4BNT_PLUGIN_PATH . 'inc/t4bnt-plugins.php';
 		}
 
 		/**

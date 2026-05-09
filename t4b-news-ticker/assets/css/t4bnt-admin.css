@@ -1,5 +1,5 @@
 /*!
- *  T4B News Ticker v1.4.4 - 7 March, 2026
+ *  T4B News Ticker v1.4.5 - 9 May, 2026
  *  by @realwebcare - https://www.realwebcare.com/
  */
 
@@ -604,6 +604,19 @@
     color: #00fbbd
 }
 /* // Help */
+
+/* Plugin Card */
+.toplevel_page_t4bnt-settings .wp-submenu li:nth-of-type(3) a:after {
+    border-bottom: 1px solid #fff3;
+    content: "";
+    display: block;
+    float: left;
+    margin: 13px -15px 8px;
+    width: calc(100% + 32px);
+}
+.plugin-card.t4bnt-plugin-card .plugin-card-top {
+    min-height: 206px
+}
 
 /* Review */
 #t4bnt-review {

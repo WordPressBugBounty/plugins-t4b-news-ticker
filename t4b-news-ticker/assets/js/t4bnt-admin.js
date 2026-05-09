@@ -6,7 +6,7 @@
  * Uses localStorage to remember the active tab, so the plugin interface maintains 
  * the user's last tab state even after a page reload or revisit.
  *
- * T4B News Ticker v1.4.4 - 7 March, 2026
+ * T4B News Ticker v1.4.5 - 9 May, 2026
  * by @realwebcare - https://www.realwebcare.com/
  */
 jQuery(document).ready(function ($) {
